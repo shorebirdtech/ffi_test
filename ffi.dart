@@ -21,7 +21,7 @@ void main() {
 
   // print("got: ${PlatformConfiguration().implicitView}");
   final value = hello(true);
-  print("Hi folks: $value");
+  print("Should be false: $value");
   final value2 = hello(false);
-  print("Bye folks: $value2");
+  print("Should be true: $value2");
 }

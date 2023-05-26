@@ -7,10 +7,15 @@ to build all their dependencies correctly for me.
 
 When in doubt, just delete your build directory and build from scratch.
 
-Two build direcories:
+Older versions of the sdk (pre 3.1) seem to build `create_sdk` as part of the
+default target, that's no longer the case, we have to explicitly ask ninja
+to build it.
+
+Two build directories.  One to house the native-arm64 SDK (no simulator) a
+second to force on the simulator, but only build the aot runtime.
 
 ```
-./tools/build.py --no-goma --mode debug --arch arm64  
+./tools/build.py --no-goma --mode debug --arch arm64 create_sdk
 ./tools/build.py --no-goma --mode debug --arch simarm64 dart_precompiled_runtime_product
 ```
 
