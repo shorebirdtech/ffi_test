@@ -4,7 +4,7 @@ import 'dart:io';
 // I could not find a good way to take a built copy of Dart and a test
 // suite and actually run them.  So I wrote my own harness. :sob:
 
-// Generated with find ./tests/ffi/*.dart
+// Generated with find ./tests/ffi/*_test.dart
 // Could also just use package:glob.
 final tests = [
   'tests/ffi/abi_specific_int_incomplete_aot_test.dart',
@@ -12,24 +12,18 @@ final tests = [
   'tests/ffi/abi_specific_int_test.dart',
   'tests/ffi/abi_test.dart',
   'tests/ffi/aliasing_test.dart',
-  'tests/ffi/all_positive.dart',
   'tests/ffi/allocator_test.dart',
   'tests/ffi/bool_test.dart',
   'tests/ffi/c_types_test.dart',
-  'tests/ffi/callback_tests_utils.dart',
   'tests/ffi/calloc_test.dart',
-  'tests/ffi/coordinate.dart',
-  'tests/ffi/coordinate_nnbd_workaround.dart',
   'tests/ffi/data_not_asan_test.dart',
   'tests/ffi/data_test.dart',
   'tests/ffi/dylib_isolates_test.dart',
-  'tests/ffi/dylib_utils.dart',
   'tests/ffi/expando_test.dart',
   'tests/ffi/extension_methods_test.dart',
   'tests/ffi/external_typed_data_test.dart',
   'tests/ffi/ffi_callback_unique_test.dart',
   'tests/ffi/ffi_native_test.dart',
-  'tests/ffi/ffi_test_helpers.dart',
   'tests/ffi/finalizer_external_size_accounting_test.dart',
   'tests/ffi/function_callbacks_many_test.dart',
   'tests/ffi/function_callbacks_structs_by_value_generated_test.dart',
@@ -41,7 +35,6 @@ final tests = [
   'tests/ffi/function_structs_by_value_generated_args_native_leaf_test.dart',
   'tests/ffi/function_structs_by_value_generated_args_native_test.dart',
   'tests/ffi/function_structs_by_value_generated_args_test.dart',
-  'tests/ffi/function_structs_by_value_generated_compounds.dart',
   'tests/ffi/function_structs_by_value_generated_ret_arg_leaf_test.dart',
   'tests/ffi/function_structs_by_value_generated_ret_arg_native_leaf_test.dart',
   'tests/ffi/function_structs_by_value_generated_ret_arg_native_test.dart',
@@ -107,7 +100,6 @@ final tests = [
   'tests/ffi/structs_test.dart',
   'tests/ffi/unaligned_test.dart',
   'tests/ffi/variance_function_test.dart',
-  'tests/ffi/very_large_struct.dart',
   'tests/ffi/vmspecific_dynamic_library_test.dart',
   'tests/ffi/vmspecific_enable_ffi_test.dart',
   'tests/ffi/vmspecific_ffi_native_test.dart',
