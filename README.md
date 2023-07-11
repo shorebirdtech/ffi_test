@@ -19,7 +19,7 @@ second to force on the simulator, but only build the aot runtime.
 ./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
 ```
 
-# Usage:
+## Usage:
 
 Edit `ffi.dart` to change the function you want to call.
 
@@ -37,3 +37,18 @@ clang hello.c -shared -o libhello.so
 ```
 lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product ffi.aot
 ```
+
+This is all bundled together in `debug.sh` which you can use.
+
+## FFI Tests
+
+I've just started trying to run the Dart FFI tests.  I couldn't figure
+out the Dart test harness, so I wrote a simple harness myself:
+
+`dart run run_ffi_tests.dart`
+
+Or better:
+
+`dart run run_ffi_tests.dart > ffi_tests_output.txt`
+
+And go get some coffee.  It takes a while.
