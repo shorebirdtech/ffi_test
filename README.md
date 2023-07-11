@@ -16,7 +16,7 @@ second to force on the simulator, but only build the aot runtime.
 
 ```
 ./tools/build.py --no-goma --mode debug --arch arm64 create_sdk
-./tools/build.py --no-goma --mode debug --arch simarm64 dart_precompiled_runtime_product
+./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
 ```
 
 # Usage:
@@ -25,7 +25,10 @@ Edit `ffi.dart` to change the function you want to call.
 
 Edit `hello.c` to change the C side.
 
-Use `clang hello.c -shared -o libhello.so` to build the C side.
+Build C:
+```
+clang hello.c -shared -o libhello.so
+```
 
 ```
 ../dart-sdk/sdk/xcodebuild/DebugARM64/dart-sdk/bin/dart compile aot-snapshot ffi.dart 

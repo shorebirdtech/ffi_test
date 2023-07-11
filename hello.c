@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int hello_world(int input)
+int hello_callback(int (*fn)())
 {
-    return !input;
+    int result = fn();
+    return result + 1;
 }

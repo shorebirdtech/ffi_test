@@ -1,27 +1,24 @@
 import 'dart:ffi';
 
-// class FlutterView {}
+typedef NativeCallbackTest = Int32 Function(Pointer);
+typedef NativeCallbackTestFn = int Function(Pointer);
 
-// class PlatformConfiguration {
-//   final List<FlutterView> _views = [];
-//   FlutterView? get implicitView => _implicitViewEnabled() ? _views[0] : null;
-
-//   @Native<Handle Function()>(
-//       symbol: 'PlatformConfigurationNativeApi::ImplicitViewEnabled')
-//   external static bool _implicitViewEnabled();
-// }
-
-typedef HelloWorldFunc = Bool Function(Bool);
-typedef HelloWorld = bool Function(bool);
+typedef CallbackFn = Int Function();
+int do_callback() {
+  print("Hello from Dart");
+  return 10;
+}
 
 void main() {
   final dylib = DynamicLibrary.open('libhello.so');
-  final HelloWorld hello =
-      dylib.lookup<NativeFunction<HelloWorldFunc>>('hello_world').asFunction();
 
-  // print("got: ${PlatformConfiguration().implicitView}");
-  final value = hello(true);
-  print("Should be false: $value");
-  final value2 = hello(false);
-  print("Should be true: $value2");
+  final NativeCallbackTestFn tester =
+      dylib.lookupFunction<NativeCallbackTest, NativeCallbackTestFn>(
+          "hello_callback",
+          isLeaf: false);
+
+  final callback = Pointer.fromFunction<CallbackFn>(do_callback, 20);
+
+  final int testCode = tester(callback);
+  print(testCode);
 }
