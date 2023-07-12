@@ -12,13 +12,11 @@ int do_callback() {
 void main() {
   final dylib = DynamicLibrary.open('libhello.so');
 
-  final NativeCallbackTestFn tester =
+  final NativeCallbackTestFn hello_callback =
       dylib.lookupFunction<NativeCallbackTest, NativeCallbackTestFn>(
           "hello_callback",
           isLeaf: false);
-
   final callback = Pointer.fromFunction<CallbackFn>(do_callback, 20);
-
-  final int testCode = tester(callback);
-  print(testCode);
+  final int callbackResponse = hello_callback(callback);
+  print(callbackResponse);
 }

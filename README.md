@@ -15,7 +15,10 @@ Two build directories.  One to house the native-arm64 SDK (no simulator) a
 second to force on the simulator, but only build the aot runtime.
 
 ```
-./tools/build.py --no-goma --mode debug --arch arm64 create_sdk
+./tools/build.py --no-goma --mode debug --arch arm64 create_sdk --gn-args='dart_simulator_ffi=true'
+```
+
+```
 ./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
 ```
 
