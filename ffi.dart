@@ -17,6 +17,10 @@ int do_callback() {
   // return x;
 }
 
+int other_callback() {
+  return 42;
+}
+
 // https://github.com/shorebirdtech/shorebird/issues/654
 // int throws_from_dart() {
 //   throw Exception("Hello from Dart");
@@ -32,6 +36,17 @@ void main() {
   final callback = Pointer.fromFunction<CallbackFn>(do_callback, 20);
   try {
     final int callbackResponse = hello_callback(callback);
+    print(callbackResponse);
+  } catch (e) {
+    print(e);
+  }
+
+  final NativeCallbackTestFn callback_two = dylib
+      .lookupFunction<NativeCallbackTest, NativeCallbackTestFn>("callback_two",
+          isLeaf: false);
+  final other = Pointer.fromFunction<CallbackFn>(other_callback, 1242);
+  try {
+    final int callbackResponse = callback_two(other);
     print(callbackResponse);
   } catch (e) {
     print(e);
