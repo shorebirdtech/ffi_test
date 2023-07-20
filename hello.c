@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-int hello_callback(int (*fn)())
+double hello_callback(double (*fn)(double a, double b, double c, double d, double e, double f, double g, double h))
 {
     printf("Hello from C! %p\n", fn);
-    int result = fn();
-    printf("Result: %d\n", result);
-    return result + 1;
+    double result = fn(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0);
+    printf("Result: %f\n", result);
+    return result + 1.1;
 }
 
 
-int callback_two(int (*fn)())
+double callback_two(int (*fn)(int a, int b, int c, int d, int e, int f, int g, int h))
 {
     printf("Hello from Two! %p\n", fn);
-    int result = fn();
-    printf("Result: %d\n", result);
-    return result + 1;
+    double result = fn(1, 2, 3, 4, 5, 6, 7, 8);
+    printf("Result: %f\n", result);
+    return result + 1.7;
 }

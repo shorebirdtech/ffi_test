@@ -1,24 +1,22 @@
 import 'dart:ffi';
 
-typedef NativeCallbackTest = Int32 Function(Pointer);
-typedef NativeCallbackTestFn = int Function(Pointer);
+typedef NativeCallbackTest = Double Function(Pointer);
+typedef NativeCallbackTestFn = double Function(Pointer);
 
-typedef CallbackFn = Int Function();
+typedef DoubleCallback = Double Function(
+    Double, Double, Double, Double, Double, Double, Double, Double);
+typedef IntCallback = Int Function(Int, Int, Int, Int, Int, Int, Int, Int);
 
 // https://github.com/shorebirdtech/shorebird/issues/829
-int do_callback() {
-  // Will crash if you uncomment the print.
-  // int x = 0;
-  // while (x > -1) {
-  //   x++;
-  // }
-  // print("Hello from Dart");
-  return 27;
-  // return x;
+double double_callback(double a, double b, double c, double d, double e,
+    double f, double g, double h) {
+  print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h");
+  return d;
 }
 
-int other_callback() {
-  return 42;
+int int_callback(int a, int b, int c, int d, int e, int f, int g, int h) {
+  print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h");
+  return c;
 }
 
 // https://github.com/shorebirdtech/shorebird/issues/654
@@ -33,9 +31,10 @@ void main() {
       dylib.lookupFunction<NativeCallbackTest, NativeCallbackTestFn>(
           "hello_callback",
           isLeaf: false);
-  final callback = Pointer.fromFunction<CallbackFn>(do_callback, 20);
+  final callback =
+      Pointer.fromFunction<DoubleCallback>(double_callback, 1213.0);
   try {
-    final int callbackResponse = hello_callback(callback);
+    final callbackResponse = hello_callback(callback);
     print(callbackResponse);
   } catch (e) {
     print(e);
@@ -44,9 +43,9 @@ void main() {
   final NativeCallbackTestFn callback_two = dylib
       .lookupFunction<NativeCallbackTest, NativeCallbackTestFn>("callback_two",
           isLeaf: false);
-  final other = Pointer.fromFunction<CallbackFn>(other_callback, 1242);
+  final other = Pointer.fromFunction<IntCallback>(int_callback, 13234);
   try {
-    final int callbackResponse = callback_two(other);
+    final callbackResponse = callback_two(other);
     print(callbackResponse);
   } catch (e) {
     print(e);
