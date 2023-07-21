@@ -54,3 +54,10 @@ DART_EXPORT Struct17BytesInt ReturnStruct17BytesInt(int64_t a0,
 
   return result;
 }
+
+
+DART_EXPORT int TestStruct(Struct17BytesInt (*fn)(int64_t a0, int64_t a1, int8_t a2)) {
+    Struct17BytesInt result = fn(10, 20, 30);
+    printf("Result: %lld, %lld, %d\n", result.a0, result.a1, result.a2);
+    return result.a0 + result.a1 + result.a2;
+}
