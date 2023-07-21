@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-double hello_callback(double (*fn)(double a, double b, double c, double d, double e, double f, double g, double h, double i, double j, double k, double l))
+double test_double(double (*fn)(double a, double b, double c, double d, double e, double f, double g, double h, double i, double j, double k, double l), double a, double b, double c, double d, double e, double f, double g, double h, double i, double j, double k, double l)
 {
-    printf("Hello from C! %p\n", fn);
-    double result = fn(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0);
+    printf("Hello double: %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f\n", a, b, c, d, e, f, g, h, i, j, k, l);
+    double result = fn(10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0, 110.0, 120.0);
     printf("Result: %f\n", result);
     return result + 1.1;
 }
 
 
-double callback_two(int (*fn)(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l))
+int test_int(int (*fn)(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l), int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l)
 {
-    printf("Hello from Two! %p\n", fn);
-    double result = fn(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-    printf("Result: %f\n", result);
-    return result + 1.7;
+    printf("Hello int: %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n", a, b, c, d, e, f, g, h, i, j, k, l);
+    int result = fn(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120);
+    printf("Result: %d\n", result);
+    return result + 1;
 }
