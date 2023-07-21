@@ -28,11 +28,6 @@ int int_fn(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j,
   return c;
 }
 
-// https://github.com/shorebirdtech/shorebird/issues/654
-// int throws_from_dart() {
-//   throw Exception("Hello from Dart");
-// }
-
 void main() {
   final dylib = DynamicLibrary.open('libhello.so');
 
