@@ -3,19 +3,22 @@ import 'dart:ffi';
 typedef NativeCallbackTest = Double Function(Pointer);
 typedef NativeCallbackTestFn = double Function(Pointer);
 
-typedef DoubleCallback = Double Function(
-    Double, Double, Double, Double, Double, Double, Double, Double);
-typedef IntCallback = Int Function(Int, Int, Int, Int, Int, Int, Int, Int);
+typedef DoubleCallback = Double Function(Double, Double, Double, Double, Double,
+    Double, Double, Double, Double, Double, Double, Double);
+typedef IntCallback = Int Function(
+    Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int);
 
 // https://github.com/shorebirdtech/shorebird/issues/829
 double double_callback(double a, double b, double c, double d, double e,
-    double f, double g, double h) {
-  print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h");
+    double f, double g, double h, double i, double j, double k, double l) {
+  print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l");
   return d;
 }
 
-int int_callback(int a, int b, int c, int d, int e, int f, int g, int h) {
-  print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h");
+int int_callback(int a, int b, int c, int d, int e, int f, int g, int h, int i,
+    int j, int k, int l) {
+  print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l");
+  throw "foo";
   return c;
 }
 
