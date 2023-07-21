@@ -28,30 +28,56 @@ int int_fn(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j,
   return c;
 }
 
+final class Struct17BytesInt extends Struct {
+  @Int64()
+  external int a0;
+
+  @Int64()
+  external int a1;
+
+  @Int8()
+  external int a2;
+
+  String toString() => "(${a0}, ${a1}, ${a2})";
+}
+
+typedef ReturnStruct17BytesIntFn = Struct17BytesInt Function(int, int, int);
+typedef ReturnStruct17BytesInt = Struct17BytesInt Function(Int64, Int64, Int8);
+
 void main() {
   final dylib = DynamicLibrary.open('libhello.so');
 
-  final NativeDoubleFn test_double =
-      dylib.lookupFunction<NativeDouble, NativeDoubleFn>("test_double",
-          isLeaf: false);
-  final double_fn_pointer =
-      Pointer.fromFunction<DoubleCallback>(double_fn, 1213.0);
-  try {
-    final callbackResponse = test_double(double_fn_pointer, 1.0, 2.0, 3.0, 4.0,
-        5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0);
-    print(callbackResponse);
-  } catch (e) {
-    print(e);
-  }
+  // final NativeDoubleFn test_double =
+  //     dylib.lookupFunction<NativeDouble, NativeDoubleFn>("test_double",
+  //         isLeaf: false);
+  // final double_fn_pointer =
+  //     Pointer.fromFunction<DoubleCallback>(double_fn, 1213.0);
+  // try {
+  //   final callbackResponse = test_double(double_fn_pointer, 1.0, 2.0, 3.0, 4.0,
+  //       5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0);
+  //   print(callbackResponse);
+  // } catch (e) {
+  //   print(e);
+  // }
 
-  final NativeIntFn test_int =
-      dylib.lookupFunction<NativeInt, NativeIntFn>("test_int", isLeaf: false);
-  final int_fn_pointer = Pointer.fromFunction<IntCallback>(int_fn, 13234);
-  try {
-    final callbackResponse =
-        test_int(int_fn_pointer, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-    print(callbackResponse);
-  } catch (e) {
-    print(e);
-  }
+  // final NativeIntFn test_int =
+  //     dylib.lookupFunction<NativeInt, NativeIntFn>("test_int", isLeaf: false);
+  // final int_fn_pointer = Pointer.fromFunction<IntCallback>(int_fn, 13234);
+  // try {
+  //   final callbackResponse =
+  //       test_int(int_fn_pointer, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+  //   print(callbackResponse);
+  // } catch (e) {
+  //   print(e);
+  // }
+
+  final returnStruct17BytesIntLeaf =
+      dylib.lookupFunction<ReturnStruct17BytesInt, ReturnStruct17BytesIntFn>(
+          "ReturnStruct17BytesInt",
+          isLeaf: true);
+  final struct = returnStruct17BytesIntLeaf(1, 2, 3);
+  print(struct);
+  print(struct.a0);
+  print(struct.a1);
+  print(struct.a2);
 }
