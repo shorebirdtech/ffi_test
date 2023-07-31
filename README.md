@@ -6,29 +6,21 @@ https://github.com/shorebirdtech/dart-sdk/tree/shorebird/dev
 
 ### Getting source
 
-These instructions should get you set up? (untested)
+It's *much* faster to use Google's servers to get Dart first, and then
+switch to our fork.  GitHub is very slow at cloning the Dart repo.
+
 ```
 mkdir dart-sdk
 cd dart-sdk
-cat > .gclient <<'endmsg'
-solutions = [
-  {
-    "name": "sdk",
-    "url": "https://github.com/shorebirdtech/dart-sdk@shorebird/dev",
-    "deps_file": "DEPS",
-    "managed": False,
-    "custom_deps": {},
-    "custom_vars": {
-      "download_emscripten": True,
-    },
-  },
-]
-endmsg
-gclient sync
+fetch dart
 cd sdk
-git remote add upstream https://dart.googlesource.com/sdk.git
-git fetch upstream
+git remote rename origin upstream https://dart.googlesource.com/sdk.git
+git remote add origin https://github.com/shorebirdtech/dart-sdk.git
+git fetch
+git checkout origin/shorebird/dev
+gclient sync
 ```
+
 
 ### Building
 
