@@ -32,6 +32,10 @@ fork of `stable` (3.0.6 at time of writing) doesn't yet.
 Two build directories.  One to house the native-arm64 SDK (no simulator) a
 second to force on the simulator, but only build the aot runtime.
 
+We do this because it's very slow to use the simulator build and creating
+the whole sdk (possibly unecessary) involves compiling Dart code which
+when done in the simulator is very slow.
+
 ```
 ./tools/build.py --no-goma --mode debug --arch arm64 create_sdk --gn-args='dart_simulator_ffi=true'
 ```
@@ -44,11 +48,11 @@ second to force on the simulator, but only build the aot runtime.
 
 Edit `ffi.dart` to change the function you want to call.
 
-Edit `hello.c` to change the C side.
+Edit `hello.cc` to change the C/C++ side.
 
 Build C:
 ```
-clang hello.c -shared -o libhello.so
+clang++ hello.cc -shared -o libhello.so
 ```
 
 ```
