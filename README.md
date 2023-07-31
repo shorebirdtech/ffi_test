@@ -4,7 +4,19 @@ You'll want our private fork of Dart:
 https://github.com/shorebirdtech/dart-sdk/tree/shorebird/dev
 
 
+### Setting up your build environment
+
+You'll need XCode installed, and the command line tools for XCode.
+
+Flutter has some instructions for C++ development, which I provide here for
+reference (you'll eventually need them, but may not for just Dart):
+https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment
+
+
 ### Getting source
+
+Dart has some public docs which may help:
+https://github.com/dart-lang/sdk/wiki/Building
 
 It's *much* faster to use Google's servers to get Dart first, and then
 switch to our fork.  GitHub is very slow at cloning the Dart repo.
@@ -38,11 +50,11 @@ when done in the simulator is very slow.
 
 ```
 ./tools/build.py --no-goma --mode debug --arch arm64 create_sdk --gn-args='dart_simulator_ffi=true'
-```
-
-```
 ./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
 ```
+
+This also takes a while to run the first time.  Probably ~5-10 mins and your
+fan will spin up.
 
 ### Iteration
 
@@ -50,30 +62,36 @@ Edit `ffi.dart` to change the function you want to call.
 
 Edit `hello.cc` to change the C/C++ side.
 
-Build C:
+`debug.sh` is a pre-made script to do this for you.
+
+By hand you can, build C:
 ```
 clang++ hello.cc -shared -o libhello.so
 ```
 
+Compile the Dart code to AOT:
 ```
 ../dart-sdk/sdk/xcodebuild/DebugARM64/dart-sdk/bin/dart compile aot-snapshot ffi.dart 
 ```
 
+Run the AOT snapshot in lldb:
 ```
 lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product ffi.aot
 ```
 
-This is all bundled together in `debug.sh` which you can use.
-
 ### FFI Tests
 
-I couldn't figure out the Dart test harness, so I wrote a simple harness myself:
+I couldn't figure out the Dart test harness, so I wrote a simple harness myself.
+
+My test harness has no concept of "expected failure" tests, some of the tests
+are "compile failure" tests so they will fail.  We could just remove them
+from the list of tests to run, but I haven't yet.
 
 ```
 dart run run_ffi_tests.dart
 ```
 
- Saving results as a baseline in `ffi_tests_output.txt`:
+Saving results as a baseline in `ffi_tests_output.txt`:
 
 ```
 dart run run_ffi_tests.dart > ffi_tests_output.txt
