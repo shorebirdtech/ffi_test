@@ -7,6 +7,10 @@ https://github.com/shorebirdtech/dart-sdk/tree/shorebird/dev
 ### Setting up your build environment
 
 You'll need XCode installed, and the command line tools for XCode.
+`xcode-select --install` might help you with that?
+
+I installed XCode from the App Store and then I think it prompted me when
+I launched it to install the command line tools?
 
 Flutter has some instructions for C++ development, which I provide here for
 reference (you'll eventually need them, but may not for just Dart):
