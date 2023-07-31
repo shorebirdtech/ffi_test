@@ -52,6 +52,10 @@ We do this because it's very slow to use the simulator build and creating
 the whole sdk (possibly unecessary) involves compiling Dart code which
 when done in the simulator is very slow.
 
+It may be possible to cut down the list of targets further and combine to a
+single build directory (or otherwise speed up the build) now that we're
+to a mostly working state.
+
 ```
 ./tools/build.py --no-goma --mode debug --arch arm64 create_sdk --gn-args='dart_simulator_ffi=true'
 ./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
