@@ -4,6 +4,8 @@ You'll want our private fork of Dart:
 https://github.com/shorebirdtech/dart-sdk/tree/shorebird/dev
 
 
+### Getting source
+
 These instructions should get you set up? (untested)
 ```
 mkdir dart-sdk
@@ -28,6 +30,8 @@ git remote add upstream https://dart.googlesource.com/sdk.git
 git fetch upstream
 ```
 
+### Building
+
 Two build directories.  One to house the native-arm64 SDK (no simulator) a
 second to force on the simulator, but only build the aot runtime.
 
@@ -39,7 +43,7 @@ second to force on the simulator, but only build the aot runtime.
 ./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
 ```
 
-## Usage:
+### Iteration
 
 Edit `ffi.dart` to change the function you want to call.
 
@@ -60,15 +64,18 @@ lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product f
 
 This is all bundled together in `debug.sh` which you can use.
 
-## FFI Tests
+### FFI Tests
 
-I've just started trying to run the Dart FFI tests.  I couldn't figure
-out the Dart test harness, so I wrote a simple harness myself:
+I couldn't figure out the Dart test harness, so I wrote a simple harness myself:
 
-`dart run run_ffi_tests.dart`
+```
+dart run run_ffi_tests.dart
+```
 
-Or better:
+ Saving results as a baseline in `ffi_tests_output.txt`:
 
-`dart run run_ffi_tests.dart > ffi_tests_output.txt`
+```
+dart run run_ffi_tests.dart > ffi_tests_output.txt
+```
 
 And go get some coffee.  It takes a while.
