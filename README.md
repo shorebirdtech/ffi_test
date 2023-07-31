@@ -1,15 +1,32 @@
 ## FFI Hacking
 
-Make sure you `gclient sync` after updating from git.
+You'll want our private fork of Dart:
+https://github.com/shorebirdtech/dart-sdk/tree/shorebird/dev
 
-I generally DO NOT trust the Dart build scripts.  They've repeatedly failed
-to build all their dependencies correctly for me.
 
-When in doubt, just delete your build directory and build from scratch.
-
-Older versions of the sdk (pre 3.1) seem to build `create_sdk` as part of the
-default target, that's no longer the case, we have to explicitly ask ninja
-to build it.
+These instructions should get you set up? (untested)
+```
+mkdir dart-sdk
+cd dart-sdk
+cat > .gclient <<'endmsg'
+solutions = [
+  {
+    "name": "sdk",
+    "url": "https://github.com/shorebirdtech/dart-sdk@shorebird/dev",
+    "deps_file": "DEPS",
+    "managed": False,
+    "custom_deps": {},
+    "custom_vars": {
+      "download_emscripten": True,
+    },
+  },
+]
+endmsg
+gclient sync
+cd sdk
+git remote add upstream https://dart.googlesource.com/sdk.git
+git fetch upstream
+```
 
 Two build directories.  One to house the native-arm64 SDK (no simulator) a
 second to force on the simulator, but only build the aot runtime.
