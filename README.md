@@ -14,7 +14,7 @@ mkdir dart-sdk
 cd dart-sdk
 fetch dart
 cd sdk
-git remote rename origin upstream https://dart.googlesource.com/sdk.git
+git remote rename origin upstream
 git remote add origin https://github.com/shorebirdtech/dart-sdk.git
 git fetch
 git checkout origin/shorebird/dev
