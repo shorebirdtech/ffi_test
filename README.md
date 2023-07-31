@@ -9,6 +9,8 @@ https://github.com/shorebirdtech/dart-sdk/tree/shorebird/dev
 It's *much* faster to use Google's servers to get Dart first, and then
 switch to our fork.  GitHub is very slow at cloning the Dart repo.
 
+Still this whole process may take 20+ minutes to run.
+
 ```
 mkdir dart-sdk
 cd dart-sdk
