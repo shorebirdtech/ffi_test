@@ -18,9 +18,12 @@ git remote rename origin upstream
 git remote add origin https://github.com/shorebirdtech/dart-sdk.git
 git fetch
 git checkout origin/shorebird/dev
-gclient sync
+gclient sync -D
 ```
 
+The -D isn't necessary in the `gclient sync` it's just there to clean up
+the empty directories from dependencies that `main` dart has but our
+fork of `stable` (3.0.6 at time of writing) doesn't yet.
 
 ### Building
 
