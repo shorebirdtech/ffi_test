@@ -89,6 +89,14 @@ lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product f
 
 ### FFI Tests
 
+You'll need to also build the supporting libraries for the FFI tests.
+
+```
+./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' runtime
+```
+
+Then you can run the tests.
+
 I couldn't figure out the Dart test harness, so I wrote a simple harness myself.
 
 My test harness has no concept of "expected failure" tests, some of the tests
