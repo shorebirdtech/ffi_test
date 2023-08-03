@@ -89,10 +89,10 @@ lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product f
 
 ### FFI Tests
 
-You'll need to also build the supporting libraries for the FFI tests.
+You'll need to build both the runtime and the supporting libraries for the FFI tests.
 
 ```
-./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' runtime
+./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product runtime
 ```
 
 Then you can run the tests.

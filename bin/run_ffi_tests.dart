@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:args/args.dart';
 import 'package:path/path.dart' as p;
 
 // Despite reading https://github.com/dart-lang/sdk/wiki/Testing
@@ -142,9 +143,20 @@ void main(List<String> args) {
   final compilerPath = '$compilerBuildDirPath/dart-sdk/bin/dart';
   final runtimePath = '$runtimeBuildDirPath/dart_precompiled_runtime_product';
 
+  var parser = ArgParser();
+  parser
+    ..addFlag('help', abbr: 'h', negatable: false, help: 'Show usage and exit.')
+    ..addFlag('verbose', abbr: 'v', negatable: false, help: 'Verbose output');
+  var options = parser.parse(args);
+
+  if (options['help']) {
+    print(parser.usage);
+    exit(0);
+  }
+
   var testFilter = null;
-  if (args.isNotEmpty) {
-    testFilter = args[0];
+  if (options.rest.isNotEmpty) {
+    testFilter = options.rest[0];
     print('Restricting to tests matching $testFilter');
   }
 
@@ -152,11 +164,14 @@ void main(List<String> args) {
     if (testFilter != null && !test.contains(testFilter)) {
       continue;
     }
-    print("Compiling $test");
-    final testPath = "../../$test";
 
+    final testPath = "../../$test";
     final testBaseName = p.basenameWithoutExtension(test);
     final aotName = '$testBaseName.aot';
+    print("Compiling $test");
+    if (options['verbose']) {
+      print('${compilerPath} compile aot-snapshot ${testPath} -o ${aotName}');
+    }
     final compileResult = Process.runSync(
         compilerPath, ['compile', 'aot-snapshot', testPath, '-o', aotName],
         workingDirectory: runtimeBuildDirPath);
@@ -169,6 +184,9 @@ void main(List<String> args) {
     }
 
     print("Running $test");
+    if (options['verbose']) {
+      print('${runtimePath} ${aotName}');
+    }
     final result = Process.runSync(runtimePath, [aotName],
         workingDirectory: runtimeBuildDirPath);
     if (result.exitCode != 0) {
