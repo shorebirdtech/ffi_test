@@ -145,7 +145,7 @@ void main(List<String> args) {
 
   var parser = ArgParser();
   parser
-    ..addFlag('help', abbr: 'h', negatable: false, help: 'Show usage and exit.')
+    ..addFlag('help', abbr: 'h', negatable: false, help: 'Show usage and exit')
     ..addFlag('verbose', abbr: 'v', negatable: false, help: 'Verbose output');
   var options = parser.parse(args);
 
@@ -170,7 +170,8 @@ void main(List<String> args) {
     final aotName = '$testBaseName.aot';
     print("Compiling $test");
     if (options['verbose']) {
-      print('${compilerPath} compile aot-snapshot ${testPath} -o ${aotName}');
+      print('(cd ${runtimeBuildDirPath} && '
+          '${compilerPath} compile aot-snapshot ${testPath} -o ${aotName})');
     }
     final compileResult = Process.runSync(
         compilerPath, ['compile', 'aot-snapshot', testPath, '-o', aotName],
@@ -185,7 +186,7 @@ void main(List<String> args) {
 
     print("Running $test");
     if (options['verbose']) {
-      print('${runtimePath} ${aotName}');
+      print('(cd ${runtimeBuildDirPath} && ${runtimePath} ${aotName})');
     }
     final result = Process.runSync(runtimePath, [aotName],
         workingDirectory: runtimeBuildDirPath);
