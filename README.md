@@ -16,6 +16,24 @@ Flutter has some instructions for C++ development, which I provide here for
 reference (you'll eventually need them, but may not for just Dart):
 https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment
 
+### Setting up VSCode
+
+It is absolutely essential to get compile_commands.json set up for VSC
+without it you will not have any code completion or error highlighting.
+
+https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment#vscode-with-cc-intellisense-cc
+Has some instructions for Flutter.  Dart is similar.  ninja should
+produce a compile_commands.json in your build directory, you just need
+to either symlink it to the root of your project, copy it to the root,
+or set the `"compileCommands"` setting in your `.vscode/settings.json`
+to point to the file.
+
+You won't be able to do this until you build Dart once.
+
+You also likely want to use the sdk.code-workspace workspace in
+Dart.  It will allow you to open the whole sdk/ directory while ignoring
+enough directories to not make the analyzer crash itself.
+
 
 ### Getting source
 
