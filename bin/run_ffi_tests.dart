@@ -134,14 +134,15 @@ final tests = [
 ];
 
 void main(List<String> args) {
-  final engineDir = '../dart-sdk/sdk';
-  final compilerBuildDir = 'xcodebuild/DebugARM64';
-  final runtimeBuildDir = 'xcodebuild/DebugSIMARM64';
-  final runtimeBuildDirPath = p.absolute('$engineDir/$runtimeBuildDir');
-  final compilerBuildDirPath = p.absolute('$engineDir/$compilerBuildDir');
+  // Relative to this script's working directory.
+  final sdkDir = '../dart-sdk/sdk';
+  final compilerConf = 'DebugARM64';
+  final runtimeConf = 'DebugSIMARM64';
+  final buildDirPath = p.normalize('$sdkDir/xcodebuild/$runtimeConf');
 
-  final compilerPath = '$compilerBuildDirPath/dart-sdk/bin/dart';
-  final runtimePath = '$runtimeBuildDirPath/dart_precompiled_runtime_product';
+  // Relative to buildDirPath.
+  final compilerPath = p.normalize('../../pkg/vm/tool/precompiler2');
+  final runtimePath = './dart_precompiled_runtime_product';
 
   var parser = ArgParser();
   parser
@@ -165,17 +166,17 @@ void main(List<String> args) {
       continue;
     }
 
-    final testPath = "../../$test";
+    final testPath = p.normalize('../../$test');
     final testBaseName = p.basenameWithoutExtension(test);
     final aotName = '$testBaseName.aot';
     print("Compiling $test");
     if (options['verbose']) {
-      print('(cd ${runtimeBuildDirPath} && '
-          '${compilerPath} compile aot-snapshot ${testPath} -o ${aotName})');
+      print('(cd $buildDirPath && DART_CONFIGURATION=$compilerConf '
+          '${compilerPath} ${testPath} ${aotName})');
     }
-    final compileResult = Process.runSync(
-        compilerPath, ['compile', 'aot-snapshot', testPath, '-o', aotName],
-        workingDirectory: runtimeBuildDirPath);
+    final compileResult = Process.runSync(compilerPath, [testPath, aotName],
+        workingDirectory: buildDirPath,
+        environment: {'DART_CONFIGURATION': compilerConf});
 
     if (compileResult.exitCode != 0) {
       print(compileResult.stdout);
@@ -186,10 +187,10 @@ void main(List<String> args) {
 
     print("Running $test");
     if (options['verbose']) {
-      print('(cd ${runtimeBuildDirPath} && ${runtimePath} ${aotName})');
+      print('(cd ${buildDirPath} && ${runtimePath} ${aotName})');
     }
-    final result = Process.runSync(runtimePath, [aotName],
-        workingDirectory: runtimeBuildDirPath);
+    final result =
+        Process.runSync(runtimePath, [aotName], workingDirectory: buildDirPath);
     if (result.exitCode != 0) {
       print(result.stdout);
       print(result.stderr);

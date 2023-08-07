@@ -1,17 +1,11 @@
 Compiling tests/ffi/abi_specific_int_incomplete_aot_test.dart
-Info: Compiling with sound null safety.
 
 Error: error: AbiSpecificInteger 'Incomplete' is missing mapping for 'macos_arm64'.
-Error: AOT compilation failed
-Generating AOT snapshot failed!
 
 Compile Failed: tests/ffi/abi_specific_int_incomplete_aot_test.dart
 Compiling tests/ffi/abi_specific_int_incomplete_jit_test.dart
-Info: Compiling with sound null safety.
 
 Error: error: AbiSpecificInteger 'Incomplete' is missing mapping for 'macos_arm64'.
-Error: AOT compilation failed
-Generating AOT snapshot failed!
 
 Compile Failed: tests/ffi/abi_specific_int_incomplete_jit_test.dart
 Compiling tests/ffi/abi_specific_int_test.dart
@@ -24,8 +18,8 @@ Unhandled exception:
 Expect.equals(expected: <macos_simarm64>, actual: <macos_arm64>) fails.
 #0      Expect._fail (package:expect/expect.dart:696)
 #1      Expect.equals (package:expect/expect.dart:117)
-#2      testPlatformVersionCompatibility (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/ffi/abi_test.dart:23)
-#3      main (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/ffi/abi_test.dart:12)
+#2      testPlatformVersionCompatibility (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/abi_test.dart:23)
+#3      main (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/abi_test.dart:12)
 #4      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
 #5      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
 
@@ -67,11 +61,11 @@ Compiling tests/ffi/ffi_callback_unique_test.dart
 Running tests/ffi/ffi_callback_unique_test.dart
 
 Unhandled exception:
-Expect.equals(expected: <4328793320>, actual: <4328924392>) fails.
+Expect.equals(expected: <4328269032>, actual: <4328400104>) fails.
 #0      Expect._fail (package:expect/expect.dart:696)
 #1      Expect.equals (package:expect/expect.dart:120)
-#2      ensureEqualEntries (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/ffi/ffi_callback_unique_test.dart:34)
-#3      main (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/ffi/ffi_callback_unique_test.dart:23)
+#2      ensureEqualEntries (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/ffi_callback_unique_test.dart:34)
+#3      main (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/ffi_callback_unique_test.dart:23)
 #4      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
 #5      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
 
@@ -203,23 +197,17 @@ Compiling tests/ffi/regress_43693_test.dart
 Running tests/ffi/regress_43693_test.dart
 Passed: tests/ffi/regress_43693_test.dart
 Compiling tests/ffi/regress_44985_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/regress_44985_test.dart:10:20: Error: Field 's' cannot be nullable or have type 'Null', it must be `int`, `double`, `Pointer`, or a subtype of `Struct` or `Union`.
   external Struct? s; //# 01: compile-time error
                    ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/regress_44985_test.dart
 Compiling tests/ffi/regress_44986_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/regress_44986_test.dart:10:17: Error: Field 's' cannot be nullable or have type 'Null', it must be `int`, `double`, `Pointer`, or a subtype of `Struct` or `Union`.
   external Null s; //# 01: compile-time error
                 ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/regress_44986_test.dart
 Compiling tests/ffi/regress_45189_test.dart
@@ -238,16 +226,13 @@ Compiling tests/ffi/regress_46004_test.dart
 Running tests/ffi/regress_46004_test.dart
 Passed: tests/ffi/regress_46004_test.dart
 Compiling tests/ffi/regress_46085_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/regress_46085_test.dart:11:25: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
   external Array<Int16> a0; //# 01: compile-time error
                         ^
 ../../tests/ffi/regress_46085_test.dart:14:32: Error: Field 'a1' must have an 'Array' annotation that matches the dimensions.
   external Array<Array<Int16>> a1; //# 02: compile-time error
                                ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/regress_46085_test.dart
 Compiling tests/ffi/regress_46127_test.dart
@@ -257,8 +242,6 @@ Compiling tests/ffi/regress_47594_test.dart
 Running tests/ffi/regress_47594_test.dart
 Passed: tests/ffi/regress_47594_test.dart
 Compiling tests/ffi/regress_47673_2_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/regress_47673_2_test.dart:15:18: Error: Type 'Unknown' not found.
   external Array<Unknown> b; //# 1: compile-time error
                  ^^^^^^^
@@ -269,8 +252,7 @@ Info: Compiling with sound null safety.
  - 'Array' is from 'dart:ffi'.
   external Array<Unknown> b; //# 1: compile-time error
                           ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/regress_47673_2_test.dart
 Compiling tests/ffi/regress_47673_test.dart
@@ -283,13 +265,10 @@ Compiling tests/ffi/regress_49684_test.dart
 Running tests/ffi/regress_49684_test.dart
 Passed: tests/ffi/regress_49684_test.dart
 Compiling tests/ffi/regress_51041_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/regress_51041_test.dart:13:7: Error: Field 'x' cannot be nullable or have type 'Null', it must be `int`, `double`, `Pointer`, or a subtype of `Struct` or `Union`.
       x;
       ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/regress_51041_test.dart
 Compiling tests/ffi/regress_51315_test.dart
@@ -311,14 +290,11 @@ Compiling tests/ffi/regress_51538_test.dart
 Running tests/ffi/regress_51538_test.dart
 Passed: tests/ffi/regress_51538_test.dart
 Compiling tests/ffi/regress_51913_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/regress_51913_test.dart:8:2: Error: Expected type 'NativeFunction<dynamic>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
 @Native() //# 1: compile-time error
  ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/regress_51913_test.dart
 Compiling tests/ffi/regress_b_261224444_test.dart
@@ -335,26 +311,26 @@ Running tests/ffi/regress_jump_to_frame_test.dart
 
 
 ===== CRASH =====
-si_signo=Bus error: 10(10), si_code=1, si_addr=0x14df09380
-version=3.0.6 (stable) (Fri Jul 21 12:30:54 2023 -0700) on "macos_simarm64"
-pid=7392, thread=15875, isolate_group=main(0x14e015200), isolate=main(0x14e024800)
+si_signo=Bus error: 10(10), si_code=1, si_addr=0x600002058e70
+version=3.0.6 (stable) (Fri Jul 21 14:08:38 2023 -0700) on "macos_simarm64"
+pid=51357, thread=11267, isolate_group=main(0x13d01aa00), isolate=main(0x13d02a800)
 os=macos, arch=arm64, comp=no, sim=yes
-isolate_instructions=10135e840, vm_instructions=101358000
-fp=1701b20e0, sp=1701b20b0, pc=14df09380
-  pc 0x000000014df09380 fp 0x00000001701b20e0 Unknown symbol
-  pc 0x000000010075dbec fp 0x00000001701b21c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1a4
-  pc 0x00000001007655e0 fp 0x00000001701b22c0 dart::Simulator::Execute()+0x80
-  pc 0x000000010076592c fp 0x00000001701b23b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
-  pc 0x0000000100596908 fp 0x00000001701b2450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
-  pc 0x0000000100596710 fp 0x00000001701b24c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
-  pc 0x00000001005996b4 fp 0x00000001701b2530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
-  pc 0x00000001005bfca4 fp 0x00000001701b2cf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
-  pc 0x00000001005d2860 fp 0x00000001701b2db0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
-  pc 0x00000001005d3508 fp 0x00000001701b2e40 dart::MessageHandler::TaskCallback()+0x2dc
-  pc 0x0000000100782044 fp 0x00000001701b2ef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
-  pc 0x0000000100782904 fp 0x00000001701b2f50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
-  pc 0x00000001006e7b40 fp 0x00000001701b2fc0 dart::ThreadStart(void*)+0xcc
-  pc 0x000000019fffbfa8 fp 0x00000001701b2fe0 _pthread_start+0x94
+isolate_instructions=105076840, vm_instructions=105070000
+fp=16c49e0e0, sp=16c49e0b0, pc=600002058e70
+  pc 0x0000600002058e70 fp 0x000000016c49e0e0 Unknown symbol
+  pc 0x0000000104471bec fp 0x000000016c49e1c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1a4
+  pc 0x00000001044795e0 fp 0x000000016c49e2c0 dart::Simulator::Execute()+0x80
+  pc 0x000000010447992c fp 0x000000016c49e3b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
+  pc 0x00000001042aa908 fp 0x000000016c49e450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
+  pc 0x00000001042aa710 fp 0x000000016c49e4c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
+  pc 0x00000001042ad6b4 fp 0x000000016c49e530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
+  pc 0x00000001042d3ca4 fp 0x000000016c49ecf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
+  pc 0x00000001042e6860 fp 0x000000016c49edb0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
+  pc 0x00000001042e7508 fp 0x000000016c49ee40 dart::MessageHandler::TaskCallback()+0x2dc
+  pc 0x0000000104496044 fp 0x000000016c49eef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
+  pc 0x0000000104496904 fp 0x000000016c49ef50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
+  pc 0x00000001043fbb40 fp 0x000000016c49efc0 dart::ThreadStart(void*)+0xcc
+  pc 0x000000018564ffa8 fp 0x000000016c49efe0 _pthread_start+0x94
 -- End of DumpStackTrace
 ../../runtime/vm/stack_frame.cc: 357: error: expected: code != Code::null()
 Aborting reentrant request for stack trace.
@@ -389,7 +365,18 @@ Running tests/ffi/variance_function_test.dart
 Passed: tests/ffi/variance_function_test.dart
 Compiling tests/ffi/vmspecific_dynamic_library_test.dart
 Running tests/ffi/vmspecific_dynamic_library_test.dart
-Passed: tests/ffi/vmspecific_dynamic_library_test.dart
+
+Unhandled exception:
+Invalid argument(s): Failed to load dynamic library 'libffi_test_dynamic_library.dylib': dlopen(libffi_test_dynamic_library.dylib, 0x0001): tried: 'libffi_test_dynamic_library.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/./libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/../../../libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/Frameworks/libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/./libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/../../../libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/Frameworks/libffi_test_dynamic_library.dylib' (no such file), '/usr/lib/libffi_test_dynamic_library.dylib' (no such file, not in dyld cache), 'libffi_test_dynamic_library.dylib' (no such file), '/usr/local/lib/libffi_test_dynamic_library.dylib' (no such file), '/usr/lib/libffi_test_dynamic_library.dylib' (no such file, not in dyld cache)
+#0      _open (dart:ffi-patch/ffi_dynamic_library_patch.dart:11)
+#1      new DynamicLibrary.open (dart:ffi-patch/ffi_dynamic_library_patch.dart:22)
+#2      dlopenPlatformSpecific (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/dylib_utils.dart:29)
+#3      testOpen (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/vmspecific_dynamic_library_test.dart:27)
+#4      main (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/vmspecific_dynamic_library_test.dart:17)
+#5      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
+#6      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
+
+Failed: tests/ffi/vmspecific_dynamic_library_test.dart
 Compiling tests/ffi/vmspecific_enable_ffi_test.dart
 Running tests/ffi/vmspecific_enable_ffi_test.dart
 Passed: tests/ffi/vmspecific_enable_ffi_test.dart
@@ -400,8 +387,6 @@ Compiling tests/ffi/vmspecific_function_callbacks_exit_test.dart
 Running tests/ffi/vmspecific_function_callbacks_exit_test.dart
 Passed: tests/ffi/vmspecific_function_callbacks_exit_test.dart
 Compiling tests/ffi/vmspecific_function_callbacks_negative_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_function_callbacks_negative_test.dart:15:43: Error: Undefined name 'returnVoid'.
   Pointer.fromFunction<Double Function()>(returnVoid, null); //# 59: compile-time error
                                           ^^^^^^^^^^
@@ -423,8 +408,7 @@ Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_function_callbacks_negative_test.dart:19:11: Error: Expected an exceptional return value for a native callback returning 'double'.
   Pointer.fromFunction<Double Function()>(testExceptionalReturn); //# 63: compile-time error
           ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/vmspecific_function_callbacks_negative_test.dart
 Compiling tests/ffi/vmspecific_function_callbacks_test.dart
@@ -434,28 +418,28 @@ Compiling tests/ffi/vmspecific_function_gc_test.dart
 Running tests/ffi/vmspecific_function_gc_test.dart
 
 ../../runtime/vm/simulator_arm64.cc: 955: error: expected: instr == NULL || reg != R18
-version=3.0.6 (stable) (Fri Jul 21 12:30:54 2023 -0700) on "macos_simarm64"
-pid=7583, thread=15875, isolate_group=main(0x123819200), isolate=main(0x12382a200)
+version=3.0.6 (stable) (Fri Jul 21 14:08:38 2023 -0700) on "macos_simarm64"
+pid=51474, thread=15875, isolate_group=main(0x13d812200), isolate=main(0x13d81f400)
 os=macos, arch=arm64, comp=no, sim=yes
-isolate_instructions=1039ba840, vm_instructions=1039b4000
-fp=16db55ed0, sp=16db55ea8, pc=102d486a0
-  pc 0x0000000102d486a0 fp 0x000000016db55ed0 dart::Profiler::DumpStackTrace(void*)+0x68
-  pc 0x0000000102a5b508 fp 0x000000016db55ef0 dart::Assert::Fail(char const*, ...) const+0x28
-  pc 0x0000000102dba3cc fp 0x000000016db55fd0 dart::Simulator::set_register(dart::Instr*, dart::Register, long long, dart::R31Type)+0x128
-  pc 0x0000000102dbd2e4 fp 0x000000016db560e0 dart::Simulator::DecodeLoadStoreRegPair(dart::Instr*)+0x20c
-  pc 0x0000000102db9c34 fp 0x000000016db561c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1ec
-  pc 0x0000000102dc15e0 fp 0x000000016db562c0 dart::Simulator::Execute()+0x80
-  pc 0x0000000102dc192c fp 0x000000016db563b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
-  pc 0x0000000102bf2908 fp 0x000000016db56450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
-  pc 0x0000000102bf2710 fp 0x000000016db564c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
-  pc 0x0000000102bf56b4 fp 0x000000016db56530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
-  pc 0x0000000102c1bca4 fp 0x000000016db56cf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
-  pc 0x0000000102c2e860 fp 0x000000016db56db0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
-  pc 0x0000000102c2f508 fp 0x000000016db56e40 dart::MessageHandler::TaskCallback()+0x2dc
-  pc 0x0000000102dde044 fp 0x000000016db56ef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
-  pc 0x0000000102dde904 fp 0x000000016db56f50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
-  pc 0x0000000102d43b40 fp 0x000000016db56fc0 dart::ThreadStart(void*)+0xcc
-  pc 0x000000019fffbfa8 fp 0x000000016db56fe0 _pthread_start+0x94
+isolate_instructions=105ae6840, vm_instructions=105ae0000
+fp=16ba2ded0, sp=16ba2dea8, pc=104e706a0
+  pc 0x0000000104e706a0 fp 0x000000016ba2ded0 dart::Profiler::DumpStackTrace(void*)+0x68
+  pc 0x0000000104b83508 fp 0x000000016ba2def0 dart::Assert::Fail(char const*, ...) const+0x28
+  pc 0x0000000104ee23cc fp 0x000000016ba2dfd0 dart::Simulator::set_register(dart::Instr*, dart::Register, long long, dart::R31Type)+0x128
+  pc 0x0000000104ee52e4 fp 0x000000016ba2e0e0 dart::Simulator::DecodeLoadStoreRegPair(dart::Instr*)+0x20c
+  pc 0x0000000104ee1c34 fp 0x000000016ba2e1c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1ec
+  pc 0x0000000104ee95e0 fp 0x000000016ba2e2c0 dart::Simulator::Execute()+0x80
+  pc 0x0000000104ee992c fp 0x000000016ba2e3b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
+  pc 0x0000000104d1a908 fp 0x000000016ba2e450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
+  pc 0x0000000104d1a710 fp 0x000000016ba2e4c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
+  pc 0x0000000104d1d6b4 fp 0x000000016ba2e530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
+  pc 0x0000000104d43ca4 fp 0x000000016ba2ecf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
+  pc 0x0000000104d56860 fp 0x000000016ba2edb0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
+  pc 0x0000000104d57508 fp 0x000000016ba2ee40 dart::MessageHandler::TaskCallback()+0x2dc
+  pc 0x0000000104f06044 fp 0x000000016ba2eef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
+  pc 0x0000000104f06904 fp 0x000000016ba2ef50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
+  pc 0x0000000104e6bb40 fp 0x000000016ba2efc0 dart::ThreadStart(void*)+0xcc
+  pc 0x000000018564ffa8 fp 0x000000016ba2efe0 _pthread_start+0x94
 -- End of DumpStackTrace
 ../../runtime/vm/stack_frame.cc: 357: error: expected: code != Code::null()
 Aborting reentrant request for stack trace.
@@ -476,19 +460,19 @@ testHandleWithInteger
 passObjectToC(1337)
 result = 1337
 HandleReadFieldValue
-testClosureCallback Pointer: address=0x1042a24e8
-ClosureCallbackThroughHandle 0x1042a24e8 0x12013fd78
+testClosureCallback Pointer: address=0x1042224e8
+ClosureCallbackThroughHandle 0x1042224e8 0x138157d78
 doClosureCallback
 () => void
 Closure: () => void from Function 'increaseCounter': static.
 increaseCounter
-ClosureCallbackThroughHandle 0x1042a24e8 0x12013fd78
+ClosureCallbackThroughHandle 0x1042224e8 0x138157d78
 doClosureCallback
 () => void
 Closure: () => void from Function 'increaseCounter': static.
 increaseCounter
 testReturnHandleInCallback
-ReturnHandleInCallback 0x1042b24e8
+ReturnHandleInCallback 0x1042324e8
 returnHandleCallback returning Instance of 'SomeClass'
 HandleReadFieldValue
 Dart_PropagateError(field_value)
@@ -496,32 +480,32 @@ Dart_PropagateError(field_value)
 
 ===== CRASH =====
 si_signo=Segmentation fault: 11(11), si_code=2, si_addr=0x10
-version=3.0.6 (stable) (Fri Jul 21 12:30:54 2023 -0700) on "macos_simarm64"
-pid=7605, thread=11523, isolate_group=main(0x13000ea00), isolate=main(0x130029e00)
+version=3.0.6 (stable) (Fri Jul 21 14:08:38 2023 -0700) on "macos_simarm64"
+pid=51495, thread=15875, isolate_group=main(0x13781e400), isolate=main(0x137819e00)
 os=macos, arch=arm64, comp=no, sim=yes
-isolate_instructions=103d2a840, vm_instructions=103d24000
-fp=16d875df0, sp=16d875dc0, pc=10312e298
-  pc 0x000000010312e298 fp 0x000000016d875df0 dart::Simulator::JumpToFrame(unsigned long, unsigned long, unsigned long, dart::Thread*)+0x30
-  pc 0x0000000102f75c68 fp 0x000000016d875e40 dart::Exceptions::JumpToFrame(dart::Thread*, unsigned long, unsigned long, unsigned long, bool)+0x4c
-  pc 0x0000000102f76c78 fp 0x000000016d875f80 dart::ThrowExceptionHelper(dart::Thread*, dart::Instance const&, dart::Instance const&, bool)+0x578
-  pc 0x0000000102f76d78 fp 0x000000016d875f90 dart::Exceptions::ThrowWithStackTrace(dart::Thread*, dart::Instance const&, dart::Instance const&)+0x0
-  pc 0x0000000102f76e54 fp 0x000000016d876000 dart::Exceptions::PropagateError(dart::Error const&)+0xcc
-  pc 0x000000010341d040 fp 0x000000016d876070 Dart_ToString+0x0
-  pc 0x000000010cb2b1c0 fp 0x000000016d8760a0 HandleReadFieldValue+0x78
-  pc 0x00000001031964cc fp 0x000000016d8760e0 copy_loop+0x14
-  pc 0x0000000103125bec fp 0x000000016d8761c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1a4
-  pc 0x000000010312d5e0 fp 0x000000016d8762c0 dart::Simulator::Execute()+0x80
-  pc 0x000000010312d92c fp 0x000000016d8763b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
-  pc 0x0000000102f5e908 fp 0x000000016d876450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
-  pc 0x0000000102f5e710 fp 0x000000016d8764c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
-  pc 0x0000000102f616b4 fp 0x000000016d876530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
-  pc 0x0000000102f87ca4 fp 0x000000016d876cf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
-  pc 0x0000000102f9a860 fp 0x000000016d876db0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
-  pc 0x0000000102f9b508 fp 0x000000016d876e40 dart::MessageHandler::TaskCallback()+0x2dc
-  pc 0x000000010314a044 fp 0x000000016d876ef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
-  pc 0x000000010314a904 fp 0x000000016d876f50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
-  pc 0x00000001030afb40 fp 0x000000016d876fc0 dart::ThreadStart(void*)+0xcc
-  pc 0x000000019fffbfa8 fp 0x000000016d876fe0 _pthread_start+0x94
+isolate_instructions=103dbe840, vm_instructions=103db8000
+fp=16d759df0, sp=16d759dc0, pc=1031be298
+  pc 0x00000001031be298 fp 0x000000016d759df0 dart::Simulator::JumpToFrame(unsigned long, unsigned long, unsigned long, dart::Thread*)+0x30
+  pc 0x0000000103005c68 fp 0x000000016d759e40 dart::Exceptions::JumpToFrame(dart::Thread*, unsigned long, unsigned long, unsigned long, bool)+0x4c
+  pc 0x0000000103006c78 fp 0x000000016d759f80 dart::ThrowExceptionHelper(dart::Thread*, dart::Instance const&, dart::Instance const&, bool)+0x578
+  pc 0x0000000103006d78 fp 0x000000016d759f90 dart::Exceptions::ThrowWithStackTrace(dart::Thread*, dart::Instance const&, dart::Instance const&)+0x0
+  pc 0x0000000103006e54 fp 0x000000016d75a000 dart::Exceptions::PropagateError(dart::Error const&)+0xcc
+  pc 0x00000001034ad040 fp 0x000000016d75a070 Dart_ToString+0x0
+  pc 0x0000000106bab1c0 fp 0x000000016d75a0a0 HandleReadFieldValue+0x78
+  pc 0x00000001032264cc fp 0x000000016d75a0e0 copy_loop+0x14
+  pc 0x00000001031b5bec fp 0x000000016d75a1c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1a4
+  pc 0x00000001031bd5e0 fp 0x000000016d75a2c0 dart::Simulator::Execute()+0x80
+  pc 0x00000001031bd92c fp 0x000000016d75a3b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
+  pc 0x0000000102fee908 fp 0x000000016d75a450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
+  pc 0x0000000102fee710 fp 0x000000016d75a4c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
+  pc 0x0000000102ff16b4 fp 0x000000016d75a530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
+  pc 0x0000000103017ca4 fp 0x000000016d75acf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
+  pc 0x000000010302a860 fp 0x000000016d75adb0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
+  pc 0x000000010302b508 fp 0x000000016d75ae40 dart::MessageHandler::TaskCallback()+0x2dc
+  pc 0x00000001031da044 fp 0x000000016d75aef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
+  pc 0x00000001031da904 fp 0x000000016d75af50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
+  pc 0x000000010313fb40 fp 0x000000016d75afc0 dart::ThreadStart(void*)+0xcc
+  pc 0x000000018564ffa8 fp 0x000000016d75afe0 _pthread_start+0x94
 -- End of DumpStackTrace
 ../../runtime/vm/stack_frame.cc: 357: error: expected: code != Code::null()
 Aborting reentrant request for stack trace.
@@ -561,13 +545,10 @@ Compiling tests/ffi/vmspecific_regress_37780_test.dart
 Running tests/ffi/vmspecific_regress_37780_test.dart
 Passed: tests/ffi/vmspecific_regress_37780_test.dart
 Compiling tests/ffi/vmspecific_regress_38993_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_regress_38993_test.dart:10:11: Error: Field 'x' cannot be nullable or have type 'Null', it must be `int`, `double`, `Pointer`, or a subtype of `Struct` or `Union`.
   dynamic x; //# 1: compile-time error
           ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/vmspecific_regress_38993_test.dart
 Compiling tests/ffi/vmspecific_regress_51794_test.dart
@@ -577,8 +558,6 @@ Compiling tests/ffi/vmspecific_send_port_id_test.dart
 Running tests/ffi/vmspecific_send_port_id_test.dart
 Passed: tests/ffi/vmspecific_send_port_id_test.dart
 Compiling tests/ffi/vmspecific_static_checks_ffinative_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_static_checks_ffinative_test.dart:81:10: Error: Can't have modifier 'static' here.
 Try removing 'static'.
 external static int badOptParam(); //# 12: compile-time error
@@ -665,13 +644,10 @@ external double wrongFfiReturnType(int v); //# 15: compile-time error
  - 'IntPtr' is from 'dart:ffi'.
 @FfiNative<double Function(IntPtr)>('doesntmatter') //# 17: compile-time error
  ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/vmspecific_static_checks_ffinative_test.dart
 Compiling tests/ffi/vmspecific_static_checks_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_static_checks_test.dart:522:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1100: compile-time error
             ^^^^^^^^^^^
@@ -861,7 +837,7 @@ class AbiSpecificInteger4
 ../../tests/ffi/vmspecific_static_checks_test.dart:814:16: Error: The class 'AbiSpecificInteger' can't be implemented outside of its library because it's a base class.
     implements AbiSpecificInteger1 //# 1905: compile-time error
                ^
-../DebugARM64/dart-sdk/lib/ffi/abi_specific.dart:48:12: Context: The type 'AbiSpecificInteger1' is a subtype of 'AbiSpecificInteger', and 'AbiSpecificInteger' is defined here.
+../../sdk/lib/ffi/abi_specific.dart:48:12: Context: The type 'AbiSpecificInteger1' is a subtype of 'AbiSpecificInteger', and 'AbiSpecificInteger' is defined here.
 base class AbiSpecificInteger extends NativeType {
            ^
 ../../tests/ffi/vmspecific_static_checks_test.dart:482:7: Error: The non-abstract class 'IPointer' is missing implementations for these members:
@@ -875,10 +851,10 @@ Try to either
 
 class IPointer implements Pointer {} //# 814: compile-time error
       ^^^^^^^^
-../DebugARM64/dart-sdk/lib/_internal/vm/lib/ffi_patch.dart:178:20: Context: 'Pointer.address' is defined here.
+../../sdk/lib/_internal/vm/lib/ffi_patch.dart:178:20: Context: 'Pointer.address' is defined here.
   external int get address;
                    ^^^^^^^
-../DebugARM64/dart-sdk/lib/_internal/vm/lib/ffi_patch.dart:185:14: Context: 'Pointer.cast' is defined here.
+../../sdk/lib/_internal/vm/lib/ffi_patch.dart:185:14: Context: 'Pointer.cast' is defined here.
   Pointer<U> cast<U extends NativeType>() => Pointer.fromAddress(address);
              ^^^^
 ../../tests/ffi/vmspecific_static_checks_test.dart:813:7: Error: The non-abstract class 'AbiSpecificInteger4' is missing implementations for these members:
@@ -1334,13 +1310,10 @@ class AbiSpecificInteger4
  - 'Handle' is from 'dart:ffi'.
       .lookupFunction< //# 49471: compile-time error
        ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/vmspecific_static_checks_test.dart
 Compiling tests/ffi/vmspecific_static_checks_varargs_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_static_checks_varargs_test.dart:26:26: Error: Expected type 'NativeFunction<Void Function(Pointer<Utf8>, VarArgs<(Int32, Int32, {Int32 foo})>)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Void' is from 'dart:ffi'.
@@ -1359,13 +1332,10 @@ Info: Compiling with sound null safety.
  - 'Int32' is from 'dart:ffi'.
   print(ffiTestFunctions.lookupFunction< //# 2: compile-time error
                          ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/vmspecific_static_checks_varargs_test.dart
 Compiling tests/ffi/vmspecific_variance_function_checks_test.dart
-
-Info: Compiling with sound null safety.
 ../../tests/ffi/vmspecific_variance_function_checks_test.dart:29:19: Error: 'NaTyPointerParamOpDart' isn't a type.
     p1.asFunction<NaTyPointerParamOpDart>(); //# 1:  continued
                   ^^^^^^^^^^^^^^^^^^^^^^
@@ -1398,7 +1368,6 @@ Info: Compiling with sound null safety.
  - 'NativeFunction' is from 'dart:ffi'.
     Pointer.fromFunction<NaTyPointerReturnOp>(//# 4:  continued
             ^
-Error: AOT compilation failed
-Generating AOT kernel dill failed!
+
 
 Compile Failed: tests/ffi/vmspecific_variance_function_checks_test.dart
