@@ -118,7 +118,7 @@ libraries for the FFI tests.
 
 ```
 ./tools/build.py -m debug -a simarm64 --no-goma --gn-args='dart_force_simulator=true' \
-  runtime/bin:ffi_test_functions
+  runtime/bin:ffi_test_functions runtime/bin:ffi_test_dynamic_library
 ```
 
 Then you can run the tests.
