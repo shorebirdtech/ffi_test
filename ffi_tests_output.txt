@@ -365,18 +365,7 @@ Running tests/ffi/variance_function_test.dart
 Passed: tests/ffi/variance_function_test.dart
 Compiling tests/ffi/vmspecific_dynamic_library_test.dart
 Running tests/ffi/vmspecific_dynamic_library_test.dart
-
-Unhandled exception:
-Invalid argument(s): Failed to load dynamic library 'libffi_test_dynamic_library.dylib': dlopen(libffi_test_dynamic_library.dylib, 0x0001): tried: 'libffi_test_dynamic_library.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/./libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/../../../libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/Frameworks/libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/./libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/../../../libffi_test_dynamic_library.dylib' (no such file), '/Users/kmillikin/dart-sdk/sdk/xcodebuild/DebugSIMARM64/Frameworks/libffi_test_dynamic_library.dylib' (no such file), '/usr/lib/libffi_test_dynamic_library.dylib' (no such file, not in dyld cache), 'libffi_test_dynamic_library.dylib' (no such file), '/usr/local/lib/libffi_test_dynamic_library.dylib' (no such file), '/usr/lib/libffi_test_dynamic_library.dylib' (no such file, not in dyld cache)
-#0      _open (dart:ffi-patch/ffi_dynamic_library_patch.dart:11)
-#1      new DynamicLibrary.open (dart:ffi-patch/ffi_dynamic_library_patch.dart:22)
-#2      dlopenPlatformSpecific (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/dylib_utils.dart:29)
-#3      testOpen (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/vmspecific_dynamic_library_test.dart:27)
-#4      main (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/vmspecific_dynamic_library_test.dart:17)
-#5      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
-#6      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
-
-Failed: tests/ffi/vmspecific_dynamic_library_test.dart
+Passed: tests/ffi/vmspecific_dynamic_library_test.dart
 Compiling tests/ffi/vmspecific_enable_ffi_test.dart
 Running tests/ffi/vmspecific_enable_ffi_test.dart
 Passed: tests/ffi/vmspecific_enable_ffi_test.dart
