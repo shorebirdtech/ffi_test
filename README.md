@@ -63,24 +63,30 @@ fork of `stable` (3.0.6 at time of writing) doesn't yet.
 
 ### Building
 
-Two build directories.  One to house the native-arm64 SDK (no simulator) a
-second to force on the simulator, but only build the aot runtime.
+We use two build directories.  One houses the native arm64 AOT compiler and the
+other houses the simulator AOT runtime.
 
-We do this because it's very slow to use the simulator build and creating
-the whole sdk (possibly unecessary) involves compiling Dart code which
-when done in the simulator is very slow.
+This mimics the Shorebird setup where we AOT compile with native tools and run
+in the simulator on the device.  It's also slower than necessary to use the
+simulator, especially a debug build, to compile.
 
-It may be possible to cut down the list of targets further and combine to a
-single build directory (or otherwise speed up the build) now that we're
-to a mostly working state.
+Build targets needed for AOT compilation:
 
 ```
-./tools/build.py --no-goma --mode debug --arch arm64 create_sdk --gn-args='dart_simulator_ffi=true'
-./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product
+./tools/build.py -m debug -a arm64 --no-goma --gn-args='dart_simulator_ffi=true' \
+    gen_snapshot vm_platform_strong.dill
 ```
 
-This also takes a while to run the first time.  Probably ~5-10 mins and your
-fan will spin up.
+You might see a warning `directory not found for option -L/usr/local/lib`.
+This is Dart [issue 52411](https://github.com/dart-lang/sdk/issues/52411)
+and nothing to worry about.
+
+Build targets needed for the AOT runtime:
+
+```
+./tools/build.py -m debug -a simarm64 --no-goma --gn-args='dart_simulator_ffi=true' \
+    dart_precompiled_runtime_product
+```
 
 ### Iteration
 
@@ -88,7 +94,7 @@ Edit `ffi.dart` to change the function you want to call.
 
 Edit `hello.cc` to change the C/C++ side.
 
-`debug.sh` is a pre-made script to do this for you.
+`debug.sh` is a pre-made script to compile and start `lldb` with the AOT snapshot binary.
 
 By hand you can, build C:
 ```
@@ -97,7 +103,7 @@ clang++ hello.cc -shared -o libhello.so
 
 Compile the Dart code to AOT:
 ```
-../dart-sdk/sdk/xcodebuild/DebugARM64/dart-sdk/bin/dart compile aot-snapshot ffi.dart 
+DART_CONFIGURATION=DebugARM64 ../dart-sdk/sdk/pkg/vm/tool/precompiler2 ffi.dart ffi.aot
 ```
 
 Run the AOT snapshot in lldb:
@@ -107,22 +113,26 @@ lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product f
 
 ### FFI Tests
 
-You'll need to build both the runtime and the supporting libraries for the FFI tests.
+In addition to the compiler and runtime, you'll need to build the supporting
+libraries for the FFI tests.
 
 ```
-./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' dart_precompiled_runtime_product runtime
+./tools/build.py -m debug -a simarm64 --no-goma --gn-args='dart_force_simulator=true' \
+  runtime/bin:ffi_test_functions runtime/bin:ffi_test_dynamic_library
 ```
 
 Then you can run the tests.
 
-I couldn't figure out the Dart test harness, so I wrote a simple harness myself.
+We couldn't figure out how to make the Dart test harness use different
+configurations for the AOT compiler and runtime, so we wrote a simple harness
+ourselves.
 
-My test harness has no concept of "expected failure" tests, some of the tests
+The test harness has no concept of "expected failure" tests, some of the tests
 are "compile failure" tests so they will fail.  We could just remove them
-from the list of tests to run, but I haven't yet.
+from the list of tests to run, but we haven't yet.
 
 ```
-dart run run_ffi_tests.dart
+dart run bin/run_ffi_tests.dart
 ```
 
 Saving results as a baseline in `ffi_tests_output.txt`:
@@ -131,4 +141,5 @@ Saving results as a baseline in `ffi_tests_output.txt`:
 dart run run_ffi_tests.dart > ffi_tests_output.txt
 ```
 
-And go get some coffee.  It takes a while.
+And go get some coffee.  It takes a while.  You can pass the flag `-v` or
+`--verbose` to the test harness to see what commands it is running.
