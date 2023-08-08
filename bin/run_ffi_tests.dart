@@ -135,20 +135,20 @@ final tests = [
 
 void main(List<String> args) {
   // Relative to this script's working directory.
-  final sdkDir = '../dart-sdk/sdk';
-  final compilerConf = 'DebugARM64';
-  final runtimeConf = 'DebugSIMARM64';
+  const sdkDir = '../dart-sdk/sdk';
+  const compilerConf = 'DebugARM64';
+  const runtimeConf = 'DebugSIMARM64';
   final buildDirPath = p.normalize('$sdkDir/xcodebuild/$runtimeConf');
 
   // Relative to buildDirPath.
   final compilerPath = p.normalize('../../pkg/vm/tool/precompiler2');
-  final runtimePath = './dart_precompiled_runtime_product';
+  const runtimePath = './dart_precompiled_runtime_product';
 
-  var parser = ArgParser();
+  final parser = ArgParser();
   parser
     ..addFlag('help', abbr: 'h', negatable: false, help: 'Show usage and exit')
     ..addFlag('verbose', abbr: 'v', negatable: false, help: 'Verbose output');
-  var options = parser.parse(args);
+  final options = parser.parse(args);
 
   if (options['help']) {
     print(parser.usage);
