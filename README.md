@@ -111,6 +111,35 @@ Run the AOT snapshot in lldb:
 lldb ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product ffi.aot
 ```
 
+### Tips on Debugging
+
+Both the compiler (`gen_snapshot`) and AOT runtime can dump disassembled
+code.  Pass the flags `--disassemble --disassemble-stubs`.  Disassembled code
+is written to `stderr` (redirect to a file with `2> /tmp/whatever.asm`).
+
+Assembly code from the compiler has code comments embedded in it by default,
+except in `product` builds (pass `--code-comments` to enable).  Assembly code
+in the snapshot does not have comments.  If wanted you can find them by:
+
+1. Dump the code from the compiler, with comments
+1. Dump the code from the AOT runtime, without comments
+
+The code objects will have different addresses.  Serializing and deserializing
+them effectively relocates them.  So you can find an address in the snapshot
+code, figure out what code object it is in, and then find the corresponding
+code object from the precompiler.
+
+You can trace the simulator.  Pass the flag `--trace-sim-after`.  It takes an
+integer value which is the simulated instruction number to begin tracing at.
+So for instance, `--trace-sim-after=0` will trace right from the beginning.
+
+If you know that something goes wrong later, for example by running in `lldb`,
+you can begin tracing at a later instruction number.  I usually just dump the
+entire trace to a file.  Traces are also written to `stderr` so they can be
+redirected with `2>`.
+
+You can trace and disassemble at the same time.
+
 ### FFI Tests
 
 In addition to the compiler and runtime, you'll need to build the supporting
