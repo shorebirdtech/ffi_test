@@ -30,6 +30,15 @@ to point to the file.
 
 You won't be able to do this until you build Dart once.
 
+The commands I use are:
+```
+./tools/build.py --no-goma --mode debug --arch simarm64 --gn-args='dart_force_simulator=true' runtime --export-compile-commands
+ln -s xcodebuild/DebugSIMARM64/compile_commands.json ./
+```
+It's just picking which build directory to use, and then adding
+`--export-compile-commands` to the build command and then symlinking the
+resulting file to the root of the project so VSC can find it.
+
 You also likely want to use the sdk.code-workspace workspace in
 Dart.  It will allow you to open the whole sdk/ directory while ignoring
 enough directories to not make the analyzer crash itself.
