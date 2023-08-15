@@ -2,30 +2,30 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
-typedef NativeDouble = Double Function(Pointer, Double, Double, Double, Double,
-    Double, Double, Double, Double, Double, Double, Double, Double);
-typedef NativeDoubleFn = double Function(Pointer, double, double, double,
-    double, double, double, double, double, double, double, double, double);
+typedef NativeDoubleFn = Double Function(Pointer, Double, Double, Double,
+    Double, Double, Double, Double, Double, Double, Double, Double, Double);
+typedef DartDoubleFn = double Function(Pointer, double, double, double, double,
+    double, double, double, double, double, double, double, double);
 
-typedef NativeInt = Int Function(
+typedef NativeIntFn = Int Function(
     Pointer, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int);
-typedef NativeIntFn = int Function(
+typedef DartIntFn = int Function(
     Pointer, int, int, int, int, int, int, int, int, int, int, int, int);
 
 typedef DoubleCallback = Double Function(Double, Double, Double, Double, Double,
     Double, Double, Double, Double, Double, Double, Double);
-typedef IntCallback = Int Function(
+typedef IntCallbackFn = Int Function(
     Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int, Int);
 
 // https://github.com/shorebirdtech/shorebird/issues/829
-double double_fn(double a, double b, double c, double d, double e, double f,
-    double g, double h, double i, double j, double k, double l) {
+double doubleCallback(double a, double b, double c, double d, double e,
+    double f, double g, double h, double i, double j, double k, double l) {
   print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l");
   return d;
 }
 
-int int_fn(int a, int b, int c, int d, int e, int f, int g, int h, int i, int j,
-    int k, int l) {
+int intCallback(int a, int b, int c, int d, int e, int f, int g, int h, int i,
+    int j, int k, int l) {
   print("Hello from Dart: $a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l");
   return c;
 }
@@ -58,28 +58,38 @@ Struct17BytesInt returnStruct(int a, int b, int c) {
   return result;
 }
 
+typedef NativeThrowsFn = Handle Function(Int a, Int b);
+typedef DartThrowsFn = Object Function(int a, int b);
+
+Object alwaysThrows(int a, int b) {
+  print("alwaysThrows($a, $b)");
+  final sum = a + b;
+  print("throwing $sum...");
+  throw sum;
+}
+
 void main() {
   final dylib = DynamicLibrary.open('libhello.so');
 
-  final NativeDoubleFn test_double =
-      dylib.lookupFunction<NativeDouble, NativeDoubleFn>("test_double",
+  final DartDoubleFn testDouble =
+      dylib.lookupFunction<NativeDoubleFn, DartDoubleFn>("test_double",
           isLeaf: false);
-  final double_fn_pointer =
-      Pointer.fromFunction<DoubleCallback>(double_fn, 1213.0);
+  final doubleFnPointer =
+      Pointer.fromFunction<DoubleCallback>(doubleCallback, 1213.0);
   try {
-    final callbackResponse = test_double(double_fn_pointer, 1.0, 2.0, 3.0, 4.0,
+    final callbackResponse = testDouble(doubleFnPointer, 1.0, 2.0, 3.0, 4.0,
         5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0);
     print(callbackResponse);
   } catch (e) {
     print(e);
   }
 
-  final NativeIntFn test_int =
-      dylib.lookupFunction<NativeInt, NativeIntFn>("test_int", isLeaf: false);
-  final int_fn_pointer = Pointer.fromFunction<IntCallback>(int_fn, 13234);
+  final DartIntFn testInt =
+      dylib.lookupFunction<NativeIntFn, DartIntFn>("test_int", isLeaf: false);
+  final intFnPointer = Pointer.fromFunction<IntCallbackFn>(intCallback, 13234);
   try {
     final callbackResponse =
-        test_int(int_fn_pointer, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+        testInt(intFnPointer, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
     print(callbackResponse);
   } catch (e) {
     print(e);
@@ -100,4 +110,19 @@ void main() {
   final structCallback =
       Pointer.fromFunction<ReturnStruct17BytesInt>(returnStruct);
   testStruct(structCallback);
+
+  // This test has no user-supplied native code.  It wraps a Dart function as a
+  // native function pointer, and then wraps that function pointer as a Dart
+  // function and calls it.
+  //
+  // It's a regression test for a problem where the `asFunction` trampoline
+  // called the native entry stub which did not correctly call
+  // Dart_PropagateError in the simulator.
+  final testThrowPointer = Pointer.fromFunction<NativeThrowsFn>(alwaysThrows);
+  final testThrow = testThrowPointer.asFunction<DartThrowsFn>();
+  try {
+    testThrow(3, 4);
+  } catch (e) {
+    print('... caught $e');
+  }
 }
