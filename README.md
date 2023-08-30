@@ -123,7 +123,7 @@ and nothing to worry about.
 Build targets needed for the AOT runtime:
 
 ```
-./tools/build.py -m debug -a simarm64 --no-goma --gn-args='dart_simulator_ffi=true' \
+./tools/build.py -m debug -a simarm64 --no-goma --gn-args='dart_force_simulator=true' \
     --gn-args='dart_debug_optimization_level=0' \
     dart_precompiled_runtime_product
 ```
