@@ -214,3 +214,55 @@ And go get some coffee.  It takes a while.  You can run individual tests or
 a subset of the tests by passing a string argument to the script.  You can pass
 the flag `-v` or `--verbose` to the test harness to see what commands it is
 running.
+
+
+### Testing a custom Dart with Flutter
+
+To build your own Dart for local testing with Flutter, we have some
+(needlessly private) instructions here:
+https://github.com/shorebirdtech/_shorebird/wiki/Hacking-on-the-engine-and-updater
+
+#### Getting the sources
+
+You'll need a checkout of the Flutter engine (documented above).
+You'll then want to change the revision of the Dart SDK in
+`src/third_party/dart` to your desired branch, e.g for mixed-mode:
+```cd third_party/dart
+git checkout shorebird/mixed-mode
+```
+
+Then you will need to make sure that `buildroot` and `flutter` are both checked
+out to compatible revisions.  At time of writing `shorebird/mixed-mode` above
+is based on Dart 3.1.0, which was in Flutter 3.13.0, so you would want to
+checkout `flutter_release/3.13.0` in `buildroot` and `flutter`.
+`flutter_release` is our branch prefix for our release branches of Flutter
+which we maintain across all our forks.
+
+You can figure out what version of Flutter/Dart your branch is based on by
+walking back through `git log` until you find a tag from the flutter team.
+
+#### iOS
+
+To build the engine for iOS with your changes:
+```
+./flutter/tools/gn --no-goma --runtime-mode=release --no-enable-unittests --ios --gn-arg='dart_force_simulator=true' && \
+ninja -C out/ios_release
+```
+
+You can try running directly from the command line:
+```
+flutter run -d iphone --release --local-engine-src-path=$HOME/Documents/GitHub/engine/src --local-engine ios_release -v
+```
+
+However you're more likely to want to run inside XCode, where you have easy
+access to the debugger:
+```
+flutter build ios --config-only --local-engine-src-path=$HOME/Documents/GitHub/engine/src --local-engine ios_release
+open ios/Runner.xcworkspace
+```
+
+However sometimes XCode builds will fail with "Unhandled Exception:" when
+there is a failure in one of the Dart scripts which XCode calls out to.
+The only way I know to see that error is to use the `flutter run` flavor
+of the command with `-v` and then scroll up (the error will occur long before
+the actual command execution stops).
