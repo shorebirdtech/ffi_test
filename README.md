@@ -256,10 +256,15 @@ host build with your custom Dart, but you'll need to build it with the same
 version of Dart that you're trying to use for iOS.
 
 ```
-./flutter/tools/gn --runtime-mode=release --no-goma && \
-  ninja -C out/host_release && \
-  say "done"
+./flutter/tools/gn --runtime-mode=release --no-goma
+ninja -C out/host_release flutter/build/archives:archive_gen_snapshot
 ```
+
+I'm not 100% certain which targets are needed to build.  Trying to build all
+of the default targets seems to take an hour or more on a modern machine.
+
+archive_gen_snapshot is based on what the host_release builder seems to do:
+https://github.com/flutter/engine/blob/main/ci/builders/mac_host_engine.json#L168
 
 #### iOS
 
