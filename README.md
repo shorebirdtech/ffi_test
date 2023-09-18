@@ -249,6 +249,18 @@ cd third_party/dart
 git checkout shorebird/mixed-mode
 ```
 
+#### Host
+
+Flutter requires a host build to support device builds.  You can build the
+host build with your custom Dart, but you'll need to build it with the same
+version of Dart that you're trying to use for iOS.
+
+```
+./flutter/tools/gn --runtime-mode=release --no-goma && \
+  ninja -C out/host_release && \
+  say "done"
+```
+
 #### iOS
 
 To build the engine for iOS with your changes:
@@ -274,3 +286,11 @@ there is a failure in one of the Dart scripts which XCode calls out to.
 The only way I know to see that error is to use the `flutter run` flavor
 of the command with `-v` and then scroll up (the error will occur long before
 the actual command execution stops).
+
+
+### Troubleshooting
+
+"Unexpected Kernel Format Version XXX (expected YYY) when reading file:///...flutter_patched_sdk/platform_strong.dill"
+This most often happens when you haven't built `host_release` with the same
+version of Dart as you're trying to use for `ios_release`.  Make sure you
+`gclient sync` with the same version of Flutter you're trying to use for iOS.
