@@ -224,22 +224,30 @@ https://github.com/shorebirdtech/_shorebird/wiki/Hacking-on-the-engine-and-updat
 
 #### Getting the sources
 
-You'll need a checkout of the Flutter engine (documented above).
-You'll then want to change the revision of the Dart SDK in
-`src/third_party/dart` to your desired branch, e.g for mixed-mode:
-```cd third_party/dart
-git checkout shorebird/mixed-mode
-```
-
-Then you will need to make sure that `buildroot` and `flutter` are both checked
-out to compatible revisions.  At time of writing `shorebird/mixed-mode` above
-is based on Dart 3.1.0, which was in Flutter 3.13.0, so you would want to
-checkout `flutter_release/3.13.0` in `buildroot` and `flutter`.
-`flutter_release` is our branch prefix for our release branches of Flutter
-which we maintain across all our forks.
+First you have to determine which version of Flutter you're going to use
+as your base.  Since you have a specific Dart revision base you're trying to
+build into Flutter, you need to figure out what version of Flutter shipped
+with that exact Dart revision (or close enough).  In the case of
+`shorebird/mixed-mode` it's based on Dart 3.1.0, which was in Flutter 3.13.0.
 
 You can figure out what version of Flutter/Dart your branch is based on by
 walking back through `git log` until you find a tag from the flutter team.
+
+We keep Shorebird branches for each Flutter version we ship, so you can
+find the branch for the version you're looking for.  In this case it's
+`flutter_release/3.13.0` across all of our forks. You only need to check out
+the "engine" revision since that contains the DEPS file and `gclient sync` will
+check out the other repos for you.
+
+You'll need a checkout of the Flutter engine (documented above), including
+making sure you run `gclient sync` with the version of Flutter you're trying to
+use.  *After* the gclient sync, you can switch to your Dart branch.
+
+e.g for mixed-mode:
+```
+cd third_party/dart
+git checkout shorebird/mixed-mode
+```
 
 #### iOS
 
