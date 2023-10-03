@@ -59,17 +59,7 @@ Running tests/ffi/external_typed_data_test.dart
 Passed: tests/ffi/external_typed_data_test.dart
 Compiling tests/ffi/ffi_callback_unique_test.dart
 Running tests/ffi/ffi_callback_unique_test.dart
-
-Unhandled exception:
-Expect.equals(expected: <4328269032>, actual: <4328400104>) fails.
-#0      Expect._fail (package:expect/expect.dart:696)
-#1      Expect.equals (package:expect/expect.dart:120)
-#2      ensureEqualEntries (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/ffi_callback_unique_test.dart:34)
-#3      main (file:///Users/kmillikin/dart-sdk/sdk/tests/ffi/ffi_callback_unique_test.dart:23)
-#4      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
-#5      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
-
-Failed: tests/ffi/ffi_callback_unique_test.dart
+Passed: tests/ffi/ffi_callback_unique_test.dart
 Compiling tests/ffi/ffi_native_test.dart
 Running tests/ffi/ffi_native_test.dart
 Passed: tests/ffi/ffi_native_test.dart
@@ -311,29 +301,14 @@ Running tests/ffi/regress_jump_to_frame_test.dart
 
 
 ===== CRASH =====
-si_signo=Bus error: 10(10), si_code=1, si_addr=0x600002058e70
-version=3.0.6 (stable) (Fri Jul 21 14:08:38 2023 -0700) on "macos_simarm64"
-pid=51357, thread=11267, isolate_group=main(0x13d01aa00), isolate=main(0x13d02a800)
+si_signo=Segmentation fault: 11(11), si_code=2, si_addr=0x10
+version=3.1.0 (stable) (Fri Sep 29 18:05:22 2023 -0500) on "macos_simarm64"
+pid=48890, thread=11011, isolate_group=main(0x13080b000), isolate=main(0x130817600)
 os=macos, arch=arm64, comp=no, sim=yes
-isolate_instructions=105076840, vm_instructions=105070000
-fp=16c49e0e0, sp=16c49e0b0, pc=600002058e70
-  pc 0x0000600002058e70 fp 0x000000016c49e0e0 Unknown symbol
-  pc 0x0000000104471bec fp 0x000000016c49e1c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1a4
-  pc 0x00000001044795e0 fp 0x000000016c49e2c0 dart::Simulator::Execute()+0x80
-  pc 0x000000010447992c fp 0x000000016c49e3b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
-  pc 0x00000001042aa908 fp 0x000000016c49e450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
-  pc 0x00000001042aa710 fp 0x000000016c49e4c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
-  pc 0x00000001042ad6b4 fp 0x000000016c49e530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
-  pc 0x00000001042d3ca4 fp 0x000000016c49ecf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
-  pc 0x00000001042e6860 fp 0x000000016c49edb0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
-  pc 0x00000001042e7508 fp 0x000000016c49ee40 dart::MessageHandler::TaskCallback()+0x2dc
-  pc 0x0000000104496044 fp 0x000000016c49eef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
-  pc 0x0000000104496904 fp 0x000000016c49ef50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
-  pc 0x00000001043fbb40 fp 0x000000016c49efc0 dart::ThreadStart(void*)+0xcc
-  pc 0x000000018564ffa8 fp 0x000000016c49efe0 _pthread_start+0x94
--- End of DumpStackTrace
-../../runtime/vm/stack_frame.cc: 357: error: expected: code != Code::null()
-Aborting reentrant request for stack trace.
+isolate_instructions=103b77180, vm_instructions=103b6c000
+fp=140107550, sp=140107440, pc=102b775e8
+Stack dump aborted because GetAndValidateThreadStackBounds failed.
+  pc 0x0000000102b775e8 fp 0x0000000140107550 dart::StackResource::previous() const+0xc
 
 Failed: tests/ffi/regress_jump_to_frame_test.dart
 Compiling tests/ffi/sizeof_test.dart
@@ -406,31 +381,29 @@ Passed: tests/ffi/vmspecific_function_callbacks_test.dart
 Compiling tests/ffi/vmspecific_function_gc_test.dart
 Running tests/ffi/vmspecific_function_gc_test.dart
 
-../../runtime/vm/simulator_arm64.cc: 955: error: expected: instr == NULL || reg != R18
-version=3.0.6 (stable) (Fri Jul 21 14:08:38 2023 -0700) on "macos_simarm64"
-pid=51474, thread=15875, isolate_group=main(0x13d812200), isolate=main(0x13d81f400)
+Simulator hit Unimplemented instruction: at 0x102c25b7c, last_pc=0x102dcfb9c
+
+0x102c25b7c    f0003548               unknown
+sim> ../../runtime/vm/simulator_arm64.cc: 488: error: ReadLine failed
+version=3.1.0 (stable) (Fri Sep 29 18:05:22 2023 -0500) on "macos_simarm64"
+pid=49039, thread=11011, isolate_group=main(0x143816600), isolate=main(0x14381be00)
 os=macos, arch=arm64, comp=no, sim=yes
-isolate_instructions=105ae6840, vm_instructions=105ae0000
-fp=16ba2ded0, sp=16ba2dea8, pc=104e706a0
-  pc 0x0000000104e706a0 fp 0x000000016ba2ded0 dart::Profiler::DumpStackTrace(void*)+0x68
-  pc 0x0000000104b83508 fp 0x000000016ba2def0 dart::Assert::Fail(char const*, ...) const+0x28
-  pc 0x0000000104ee23cc fp 0x000000016ba2dfd0 dart::Simulator::set_register(dart::Instr*, dart::Register, long long, dart::R31Type)+0x128
-  pc 0x0000000104ee52e4 fp 0x000000016ba2e0e0 dart::Simulator::DecodeLoadStoreRegPair(dart::Instr*)+0x20c
-  pc 0x0000000104ee1c34 fp 0x000000016ba2e1c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1ec
-  pc 0x0000000104ee95e0 fp 0x000000016ba2e2c0 dart::Simulator::Execute()+0x80
-  pc 0x0000000104ee992c fp 0x000000016ba2e3b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
-  pc 0x0000000104d1a908 fp 0x000000016ba2e450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
-  pc 0x0000000104d1a710 fp 0x000000016ba2e4c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
-  pc 0x0000000104d1d6b4 fp 0x000000016ba2e530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
-  pc 0x0000000104d43ca4 fp 0x000000016ba2ecf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
-  pc 0x0000000104d56860 fp 0x000000016ba2edb0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
-  pc 0x0000000104d57508 fp 0x000000016ba2ee40 dart::MessageHandler::TaskCallback()+0x2dc
-  pc 0x0000000104f06044 fp 0x000000016ba2eef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
-  pc 0x0000000104f06904 fp 0x000000016ba2ef50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
-  pc 0x0000000104e6bb40 fp 0x000000016ba2efc0 dart::ThreadStart(void*)+0xcc
-  pc 0x000000018564ffa8 fp 0x000000016ba2efe0 _pthread_start+0x94
+isolate_instructions=103e0b180, vm_instructions=103e00000
+fp=16dc1cc60, sp=16dc1cc38, pc=102d565fc
+  pc 0x0000000102d565fc fp 0x000000016dc1cc60 dart::Profiler::DumpStackTrace(bool)+0x28
+  pc 0x0000000102d56564 fp 0x000000016dc1ccb0 dart::Profiler::DumpStackTrace(void*)+0x30
+  pc 0x000000010314dfc8 fp 0x000000016dc1ccd0 Dart_DumpNativeStackTrace+0x18
+  pc 0x00000001029b7b6c fp 0x000000016dc1cd00 dart::Assert::Fail(char const*, ...) const+0x40
+  pc 0x0000000102dfb534 fp 0x000000016dc1d160 dart::SimulatorDebugger::Debug()+0x14c
+  pc 0x0000000102dfb3dc fp 0x000000016dc1d1a0 dart::SimulatorDebugger::Stop(dart::Instr*, char const*)+0x40
+  pc 0x0000000102dfee6c fp 0x000000016dc1d2b0 dart::Simulator::UnimplementedInstruction(dart::Instr*)+0x84
+  pc 0x0000000102e00aac fp 0x000000016dc1d320 dart::Simulator::DecodePCRel(dart::Instr*)+0xe4
+  pc 0x0000000102e00ba8 fp 0x000000016dc1d350 dart::Simulator::DecodeDPImmediate(dart::Instr*)+0xb8
+  pc 0x0000000102dfdeb4 fp 0x000000016dc1d390 dart::Simulator::InstructionDecode(dart::Instr*)+0xb8
+  pc 0x0000000102e0a53c fp 0x000000016dc1d450 dart::Simulator::Execute()+0xfc
+  pc 0x0000000102e29918 fp 0x000000016dc1d470 dart::SimulatorExecute(dart::Simulator*)+0x18
 -- End of DumpStackTrace
-../../runtime/vm/stack_frame.cc: 357: error: expected: code != Code::null()
+../../runtime/vm/stack_frame.cc: 362: error: expected: code != Code::null()
 Aborting reentrant request for stack trace.
 
 Failed: tests/ffi/vmspecific_function_gc_test.dart
@@ -449,19 +422,19 @@ testHandleWithInteger
 passObjectToC(1337)
 result = 1337
 HandleReadFieldValue
-testClosureCallback Pointer: address=0x1042224e8
-ClosureCallbackThroughHandle 0x1042224e8 0x138157d78
+testClosureCallback Pointer: address=0x1023e2af8
+ClosureCallbackThroughHandle 0x1023e2af8 0x13813fd78
 doClosureCallback
 () => void
 Closure: () => void from Function 'increaseCounter': static.
 increaseCounter
-ClosureCallbackThroughHandle 0x1042224e8 0x138157d78
+ClosureCallbackThroughHandle 0x1023e2af8 0x13813fd78
 doClosureCallback
 () => void
 Closure: () => void from Function 'increaseCounter': static.
 increaseCounter
 testReturnHandleInCallback
-ReturnHandleInCallback 0x1042324e8
+ReturnHandleInCallback 0x102422af8
 returnHandleCallback returning Instance of 'SomeClass'
 HandleReadFieldValue
 Dart_PropagateError(field_value)
@@ -469,35 +442,13 @@ Dart_PropagateError(field_value)
 
 ===== CRASH =====
 si_signo=Segmentation fault: 11(11), si_code=2, si_addr=0x10
-version=3.0.6 (stable) (Fri Jul 21 14:08:38 2023 -0700) on "macos_simarm64"
-pid=51495, thread=15875, isolate_group=main(0x13781e400), isolate=main(0x137819e00)
+version=3.1.0 (stable) (Fri Sep 29 18:05:22 2023 -0500) on "macos_simarm64"
+pid=49069, thread=15875, isolate_group=main(0x134823a00), isolate=main(0x13482f600)
 os=macos, arch=arm64, comp=no, sim=yes
-isolate_instructions=103dbe840, vm_instructions=103db8000
-fp=16d759df0, sp=16d759dc0, pc=1031be298
-  pc 0x00000001031be298 fp 0x000000016d759df0 dart::Simulator::JumpToFrame(unsigned long, unsigned long, unsigned long, dart::Thread*)+0x30
-  pc 0x0000000103005c68 fp 0x000000016d759e40 dart::Exceptions::JumpToFrame(dart::Thread*, unsigned long, unsigned long, unsigned long, bool)+0x4c
-  pc 0x0000000103006c78 fp 0x000000016d759f80 dart::ThrowExceptionHelper(dart::Thread*, dart::Instance const&, dart::Instance const&, bool)+0x578
-  pc 0x0000000103006d78 fp 0x000000016d759f90 dart::Exceptions::ThrowWithStackTrace(dart::Thread*, dart::Instance const&, dart::Instance const&)+0x0
-  pc 0x0000000103006e54 fp 0x000000016d75a000 dart::Exceptions::PropagateError(dart::Error const&)+0xcc
-  pc 0x00000001034ad040 fp 0x000000016d75a070 Dart_ToString+0x0
-  pc 0x0000000106bab1c0 fp 0x000000016d75a0a0 HandleReadFieldValue+0x78
-  pc 0x00000001032264cc fp 0x000000016d75a0e0 copy_loop+0x14
-  pc 0x00000001031b5bec fp 0x000000016d75a1c0 dart::Simulator::InstructionDecode(dart::Instr*)+0x1a4
-  pc 0x00000001031bd5e0 fp 0x000000016d75a2c0 dart::Simulator::Execute()+0x80
-  pc 0x00000001031bd92c fp 0x000000016d75a3b0 dart::Simulator::Call(long long, long long, long long, long long, long long, bool, bool)+0x254
-  pc 0x0000000102fee908 fp 0x000000016d75a450 dart::DartEntry::InvokeCode(dart::Code const&, unsigned long, dart::Array const&, dart::Array const&, dart::Thread*)+0x100
-  pc 0x0000000102fee710 fp 0x000000016d75a4c0 dart::DartEntry::InvokeFunction(dart::Function const&, dart::Array const&, dart::Array const&, unsigned long)+0x14c
-  pc 0x0000000102ff16b4 fp 0x000000016d75a530 dart::DartLibraryCalls::HandleMessage(long long, dart::Instance const&)+0x10c
-  pc 0x0000000103017ca4 fp 0x000000016d75acf0 dart::IsolateMessageHandler::HandleMessage(std::__2::unique_ptr<dart::Message, std::__2::default_delete<dart::Message>>)+0x33c
-  pc 0x000000010302a860 fp 0x000000016d75adb0 dart::MessageHandler::HandleMessages(dart::MonitorLocker*, bool, bool)+0x1ec
-  pc 0x000000010302b508 fp 0x000000016d75ae40 dart::MessageHandler::TaskCallback()+0x2dc
-  pc 0x00000001031da044 fp 0x000000016d75aef0 dart::ThreadPool::WorkerLoop(dart::ThreadPool::Worker*)+0x17c
-  pc 0x00000001031da904 fp 0x000000016d75af50 dart::ThreadPool::Worker::Main(unsigned long)+0x124
-  pc 0x000000010313fb40 fp 0x000000016d75afc0 dart::ThreadStart(void*)+0xcc
-  pc 0x000000018564ffa8 fp 0x000000016d75afe0 _pthread_start+0x94
--- End of DumpStackTrace
-../../runtime/vm/stack_frame.cc: 357: error: expected: code != Code::null()
-Aborting reentrant request for stack trace.
+isolate_instructions=101afb180, vm_instructions=101af0000
+fp=13813f520, sp=13813f410, pc=100af75e8
+Stack dump aborted because GetAndValidateThreadStackBounds failed.
+  pc 0x0000000100af75e8 fp 0x000000013813f520 dart::StackResource::previous() const+0xc
 
 Failed: tests/ffi/vmspecific_handle_test.dart
 Compiling tests/ffi/vmspecific_highmem_32bit_test.dart
@@ -637,199 +588,199 @@ external double wrongFfiReturnType(int v); //# 15: compile-time error
 
 Compile Failed: tests/ffi/vmspecific_static_checks_ffinative_test.dart
 Compiling tests/ffi/vmspecific_static_checks_test.dart
-../../tests/ffi/vmspecific_static_checks_test.dart:522:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:581:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1100: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:520:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:579:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1099: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:530:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:589:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1101: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:522:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:581:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1100: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:538:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:597:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1102: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:530:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:589:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1101: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:548:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:607:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1103: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:538:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:597:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1102: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:557:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:616:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1104: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:548:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:607:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1103: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:567:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:626:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1105: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:557:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:616:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1104: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:576:13: Error: 'EmptyStruct' is already declared in this scope.
+../../tests/ffi/vmspecific_static_checks_test.dart:635:13: Error: 'EmptyStruct' is already declared in this scope.
 final class EmptyStruct extends Struct {} //# 1106: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:567:13: Context: Previous declaration of 'EmptyStruct'.
+../../tests/ffi/vmspecific_static_checks_test.dart:626:13: Context: Previous declaration of 'EmptyStruct'.
 final class EmptyStruct extends Struct {} //# 1105: compile-time error
             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:394:5: Error: Expected 0 type arguments.
+../../tests/ffi/vmspecific_static_checks_test.dart:453:5: Error: Expected 0 type arguments.
     Struct<TestStruct11<dynamic>> {} //# 60: compile-time error
     ^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:559:26: Error: 'EmptyStruct' isn't a type.
+../../tests/ffi/vmspecific_static_checks_test.dart:618:26: Error: 'EmptyStruct' isn't a type.
 void _consumeEmptyStruct(EmptyStruct e) => //# 1104: compile-time error
                          ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:559:26: Context: This isn't a type.
+../../tests/ffi/vmspecific_static_checks_test.dart:618:26: Context: This isn't a type.
 void _consumeEmptyStruct(EmptyStruct e) => //# 1104: compile-time error
                          ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:569:1: Error: 'EmptyStruct' isn't a type.
+../../tests/ffi/vmspecific_static_checks_test.dart:628:1: Error: 'EmptyStruct' isn't a type.
 EmptyStruct _returnEmptyStruct() => EmptyStruct(); //# 1105: compile-time error
 ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:569:1: Context: This isn't a type.
+../../tests/ffi/vmspecific_static_checks_test.dart:628:1: Context: This isn't a type.
 EmptyStruct _returnEmptyStruct() => EmptyStruct(); //# 1105: compile-time error
 ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:579:12: Error: 'EmptyStruct' isn't a type.
+../../tests/ffi/vmspecific_static_checks_test.dart:638:12: Error: 'EmptyStruct' isn't a type.
   external EmptyStruct nestedEmptyStruct; //# 1106: compile-time error
            ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:579:12: Context: This isn't a type.
+../../tests/ffi/vmspecific_static_checks_test.dart:638:12: Context: This isn't a type.
   external EmptyStruct nestedEmptyStruct; //# 1106: compile-time error
            ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:341:7: Error: The type 'TestStruct3' must be 'base', 'final' or 'sealed' because the supertype 'TestStruct' is 'final'.
+../../tests/ffi/vmspecific_static_checks_test.dart:400:7: Error: The type 'TestStruct3' must be 'base', 'final' or 'sealed' because the supertype 'TestStruct' is 'final'.
 Try adding 'base', 'final', or 'sealed' to the type.
 class TestStruct3 extends TestStruct {} //# 52: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:418:27: Error: The class 'NativeType' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:477:27: Error: The class 'NativeType' can't be extended outside of its library because it's a final class.
 class ENativeType extends NativeType {} //# 90: compile-time error
                           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:420:21: Error: The class 'Int8' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:479:21: Error: The class 'Int8' can't be extended outside of its library because it's a final class.
 class EInt8 extends Int8 {} //# 91: compile-time error
                     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:422:22: Error: The class 'Int16' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:481:22: Error: The class 'Int16' can't be extended outside of its library because it's a final class.
 class EInt16 extends Int16 {} //# 92: compile-time error
                      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:424:22: Error: The class 'Int32' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:483:22: Error: The class 'Int32' can't be extended outside of its library because it's a final class.
 class EInt32 extends Int32 {} //# 93: compile-time error
                      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:426:22: Error: The class 'Int64' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:485:22: Error: The class 'Int64' can't be extended outside of its library because it's a final class.
 class EInt64 extends Int64 {} //# 94: compile-time error
                      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:428:22: Error: The class 'Uint8' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:487:22: Error: The class 'Uint8' can't be extended outside of its library because it's a final class.
 class EUint8 extends Uint8 {} //# 95: compile-time error
                      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:430:23: Error: The class 'Uint16' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:489:23: Error: The class 'Uint16' can't be extended outside of its library because it's a final class.
 class EUint16 extends Uint16 {} //# 96: compile-time error
                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:432:23: Error: The class 'Uint32' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:491:23: Error: The class 'Uint32' can't be extended outside of its library because it's a final class.
 class EUint32 extends Uint32 {} //# 97: compile-time error
                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:434:23: Error: The class 'Uint64' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:493:23: Error: The class 'Uint64' can't be extended outside of its library because it's a final class.
 class EUint64 extends Uint64 {} //# 98: compile-time error
                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:436:23: Error: The class 'IntPtr' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:495:23: Error: The class 'IntPtr' can't be extended outside of its library because it's a final class.
 class EIntPtr extends IntPtr {} //# 99: compile-time error
                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:438:22: Error: The class 'Float' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:497:22: Error: The class 'Float' can't be extended outside of its library because it's a final class.
 class EFloat extends Float {} //# 910: compile-time error
                      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:440:23: Error: The class 'Double' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:499:23: Error: The class 'Double' can't be extended outside of its library because it's a final class.
 class EDouble extends Double {} //# 911: compile-time error
                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:442:21: Error: The class 'Void' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:501:21: Error: The class 'Void' can't be extended outside of its library because it's a final class.
 class EVoid extends Void {} //# 912: compile-time error
                     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:444:31: Error: The class 'NativeFunction' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:503:31: Error: The class 'NativeFunction' can't be extended outside of its library because it's a final class.
 class ENativeFunction extends NativeFunction {} //# 913: compile-time error
                               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:446:24: Error: The class 'Pointer' can't be extended outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:505:24: Error: The class 'Pointer' can't be extended outside of its library because it's a final class.
 class EPointer extends Pointer {} //# 914: compile-time error
                        ^
-../../tests/ffi/vmspecific_static_checks_test.dart:452:30: Error: The class 'NativeType' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:511:30: Error: The class 'NativeType' can't be implemented outside of its library because it's a final class.
 class INativeType implements NativeType {} //# 80: compile-time error
                              ^
-../../tests/ffi/vmspecific_static_checks_test.dart:454:24: Error: The class 'Int8' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:513:24: Error: The class 'Int8' can't be implemented outside of its library because it's a final class.
 class IInt8 implements Int8 {} //# 81: compile-time error
                        ^
-../../tests/ffi/vmspecific_static_checks_test.dart:456:25: Error: The class 'Int16' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:515:25: Error: The class 'Int16' can't be implemented outside of its library because it's a final class.
 class IInt16 implements Int16 {} //# 82: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:458:25: Error: The class 'Int32' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:517:25: Error: The class 'Int32' can't be implemented outside of its library because it's a final class.
 class IInt32 implements Int32 {} //# 83: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:460:25: Error: The class 'Int64' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:519:25: Error: The class 'Int64' can't be implemented outside of its library because it's a final class.
 class IInt64 implements Int64 {} //# 84: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:462:25: Error: The class 'Uint8' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:521:25: Error: The class 'Uint8' can't be implemented outside of its library because it's a final class.
 class IUint8 implements Uint8 {} //# 85: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:464:26: Error: The class 'Uint16' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:523:26: Error: The class 'Uint16' can't be implemented outside of its library because it's a final class.
 class IUint16 implements Uint16 {} //# 86: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:466:26: Error: The class 'Uint32' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:525:26: Error: The class 'Uint32' can't be implemented outside of its library because it's a final class.
 class IUint32 implements Uint32 {} //# 87: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:468:26: Error: The class 'Uint64' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:527:26: Error: The class 'Uint64' can't be implemented outside of its library because it's a final class.
 class IUint64 implements Uint64 {} //# 88: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:470:26: Error: The class 'IntPtr' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:529:26: Error: The class 'IntPtr' can't be implemented outside of its library because it's a final class.
 class IIntPtr implements IntPtr {} //# 88: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:472:25: Error: The class 'Float' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:531:25: Error: The class 'Float' can't be implemented outside of its library because it's a final class.
 class IFloat implements Float {} //# 810: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:474:26: Error: The class 'Double' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:533:26: Error: The class 'Double' can't be implemented outside of its library because it's a final class.
 class IDouble implements Double {} //# 811: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:476:24: Error: The class 'Void' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:535:24: Error: The class 'Void' can't be implemented outside of its library because it's a final class.
 class IVoid implements Void {} //# 812: compile-time error
                        ^
-../../tests/ffi/vmspecific_static_checks_test.dart:480:9: Error: The class 'NativeFunction' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:539:9: Error: The class 'NativeFunction' can't be implemented outside of its library because it's a final class.
         NativeFunction {} //# 813: compile-time error
         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:482:27: Error: The class 'Pointer' can't be implemented outside of its library because it's a final class.
+../../tests/ffi/vmspecific_static_checks_test.dart:541:27: Error: The class 'Pointer' can't be implemented outside of its library because it's a final class.
 class IPointer implements Pointer {} //# 814: compile-time error
                           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:484:7: Error: The type 'IStruct' must be 'base', 'final' or 'sealed' because the supertype 'Struct' is 'base'.
+../../tests/ffi/vmspecific_static_checks_test.dart:543:7: Error: The type 'IStruct' must be 'base', 'final' or 'sealed' because the supertype 'Struct' is 'base'.
 Try adding 'base', 'final', or 'sealed' to the type.
 class IStruct implements Struct {} //# 815: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:484:26: Error: The class 'Struct' can't be implemented outside of its library because it's a base class.
+../../tests/ffi/vmspecific_static_checks_test.dart:543:26: Error: The class 'Struct' can't be implemented outside of its library because it's a base class.
 class IStruct implements Struct {} //# 815: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:486:7: Error: The type 'IOpaque' must be 'base', 'final' or 'sealed' because the supertype 'Opaque' is 'base'.
+../../tests/ffi/vmspecific_static_checks_test.dart:545:7: Error: The type 'IOpaque' must be 'base', 'final' or 'sealed' because the supertype 'Opaque' is 'base'.
 Try adding 'base', 'final', or 'sealed' to the type.
 class IOpaque implements Opaque {} //# 816: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:486:26: Error: The class 'Opaque' can't be implemented outside of its library because it's a base class.
+../../tests/ffi/vmspecific_static_checks_test.dart:545:26: Error: The class 'Opaque' can't be implemented outside of its library because it's a base class.
 class IOpaque implements Opaque {} //# 816: compile-time error
                          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:801:7: Error: The type 'AbiSpecificInteger2' must be 'base', 'final' or 'sealed' because the supertype 'AbiSpecificInteger' is 'base'.
+../../tests/ffi/vmspecific_static_checks_test.dart:860:7: Error: The type 'AbiSpecificInteger2' must be 'base', 'final' or 'sealed' because the supertype 'AbiSpecificInteger' is 'base'.
 Try adding 'base', 'final', or 'sealed' to the type.
 class AbiSpecificInteger2
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:802:16: Error: The class 'AbiSpecificInteger' can't be implemented outside of its library because it's a base class.
+../../tests/ffi/vmspecific_static_checks_test.dart:861:16: Error: The class 'AbiSpecificInteger' can't be implemented outside of its library because it's a base class.
     implements AbiSpecificInteger //# 1903: compile-time error
                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:807:7: Error: The type 'AbiSpecificInteger3' must be 'base', 'final' or 'sealed' because the supertype 'AbiSpecificInteger1' is 'final'.
+../../tests/ffi/vmspecific_static_checks_test.dart:866:7: Error: The type 'AbiSpecificInteger3' must be 'base', 'final' or 'sealed' because the supertype 'AbiSpecificInteger1' is 'final'.
 Try adding 'base', 'final', or 'sealed' to the type.
 class AbiSpecificInteger3
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:813:7: Error: The type 'AbiSpecificInteger4' must be 'base', 'final' or 'sealed' because the supertype 'AbiSpecificInteger1' is 'final'.
+../../tests/ffi/vmspecific_static_checks_test.dart:872:7: Error: The type 'AbiSpecificInteger4' must be 'base', 'final' or 'sealed' because the supertype 'AbiSpecificInteger1' is 'final'.
 Try adding 'base', 'final', or 'sealed' to the type.
 class AbiSpecificInteger4
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:814:16: Error: The class 'AbiSpecificInteger' can't be implemented outside of its library because it's a base class.
+../../tests/ffi/vmspecific_static_checks_test.dart:873:16: Error: The class 'AbiSpecificInteger' can't be implemented outside of its library because it's a base class.
     implements AbiSpecificInteger1 //# 1905: compile-time error
                ^
-../../sdk/lib/ffi/abi_specific.dart:48:12: Context: The type 'AbiSpecificInteger1' is a subtype of 'AbiSpecificInteger', and 'AbiSpecificInteger' is defined here.
+../../sdk/lib/ffi/abi_specific.dart:49:12: Context: The type 'AbiSpecificInteger1' is a subtype of 'AbiSpecificInteger', and 'AbiSpecificInteger' is defined here.
 base class AbiSpecificInteger extends NativeType {
            ^
-../../tests/ffi/vmspecific_static_checks_test.dart:482:7: Error: The non-abstract class 'IPointer' is missing implementations for these members:
+../../tests/ffi/vmspecific_static_checks_test.dart:541:7: Error: The non-abstract class 'IPointer' is missing implementations for these members:
  - Pointer.address
  - Pointer.cast
 Try to either
@@ -840,13 +791,13 @@ Try to either
 
 class IPointer implements Pointer {} //# 814: compile-time error
       ^^^^^^^^
-../../sdk/lib/_internal/vm/lib/ffi_patch.dart:178:20: Context: 'Pointer.address' is defined here.
+../../sdk/lib/_internal/vm/lib/ffi_patch.dart:181:20: Context: 'Pointer.address' is defined here.
   external int get address;
                    ^^^^^^^
-../../sdk/lib/_internal/vm/lib/ffi_patch.dart:185:14: Context: 'Pointer.cast' is defined here.
+../../sdk/lib/_internal/vm/lib/ffi_patch.dart:187:14: Context: 'Pointer.cast' is defined here.
   Pointer<U> cast<U extends NativeType>() => Pointer.fromAddress(address);
              ^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:813:7: Error: The non-abstract class 'AbiSpecificInteger4' is missing implementations for these members:
+../../tests/ffi/vmspecific_static_checks_test.dart:872:7: Error: The non-abstract class 'AbiSpecificInteger4' is missing implementations for these members:
  - AbiSpecificInteger1.a
  - AbiSpecificInteger1.b
  - AbiSpecificInteger1.b=
@@ -858,442 +809,470 @@ Try to either
 
 class AbiSpecificInteger4
       ^^^^^^^^^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:796:11: Context: 'AbiSpecificInteger1.a' is defined here.
+../../tests/ffi/vmspecific_static_checks_test.dart:855:11: Context: 'AbiSpecificInteger1.a' is defined here.
   int get a => 4; //# 1910: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:798:16: Context: 'AbiSpecificInteger1.b' is defined here.
+../../tests/ffi/vmspecific_static_checks_test.dart:857:16: Context: 'AbiSpecificInteger1.b' is defined here.
   external int b; //# 1911: compile-time error
                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:798:16: Context: 'AbiSpecificInteger1.b=' is defined here.
+../../tests/ffi/vmspecific_static_checks_test.dart:857:16: Context: 'AbiSpecificInteger1.b=' is defined here.
   external int b; //# 1911: compile-time error
                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:360:4: Error: The class 'Void' is abstract and can't be instantiated.
+../../tests/ffi/vmspecific_static_checks_test.dart:419:4: Error: The class 'Void' is abstract and can't be instantiated.
   @Void() //# 55: compile-time error
    ^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:368:4: Error: The class 'NativeType' is abstract and can't be instantiated.
+../../tests/ffi/vmspecific_static_checks_test.dart:427:4: Error: The class 'NativeType' is abstract and can't be instantiated.
   @NativeType() //# 56: compile-time error
    ^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:399:4: Error: This can't be used as an annotation; an annotation should be a reference to a compile-time constant variable, or a call to a constant constructor.
+../../tests/ffi/vmspecific_static_checks_test.dart:458:4: Error: This can't be used as an annotation; an annotation should be a reference to a compile-time constant variable, or a call to a constant constructor.
   @Pointer //# 61: compile-time error
    ^
-../../tests/ffi/vmspecific_static_checks_test.dart:514:4: Error: The class 'Handle' is abstract and can't be instantiated.
+../../tests/ffi/vmspecific_static_checks_test.dart:573:4: Error: The class 'Handle' is abstract and can't be instantiated.
   @Handle() //# 1002: compile-time error
    ^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:76:16: Error: The getter 'value' isn't defined for the class 'Pointer<NativeType>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:83:16: Error: The getter 'value' isn't defined for the class 'Pointer<NativeType>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'NativeType' is from 'dart:ffi'.
 Try correcting the name to the name of an existing getter, or defining a getter or field named 'value'.
     result = p.value; //# 20: compile-time error
                ^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:92:16: Error: A value of type 'int' can't be assigned to a variable of type 'T?'.
+../../tests/ffi/vmspecific_static_checks_test.dart:99:16: Error: A value of type 'int' can't be assigned to a variable of type 'T?'.
     result = p.value; //# 21: compile-time error
                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:104:6: Error: The getter 'value' isn't defined for the class 'Pointer<Void>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:111:6: Error: The getter 'value' isn't defined for the class 'Pointer<Void>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'Void' is from 'dart:ffi'.
 Try correcting the name to the name of an existing getter, or defining a getter or field named 'value'.
   p2.value; //# 22: compile-time error
      ^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:111:17: Error: The getter 'value' isn't defined for the class 'Pointer<NativeFunction<Int8 Function(Int8)>>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:118:17: Error: The getter 'value' isn't defined for the class 'Pointer<NativeFunction<Int8 Function(Int8)>>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Int8' is from 'dart:ffi'.
 Try correcting the name to the name of an existing getter, or defining a getter or field named 'value'.
   IntUnOp f = p.value; //# 23: compile-time error
                 ^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:124:24: Error: A value of type 'Pointer<Int16>' can't be assigned to a variable of type 'Pointer<Int8>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:131:24: Error: A value of type 'Pointer<Int16>' can't be assigned to a variable of type 'Pointer<Int8>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'Int16' is from 'dart:ffi'.
  - 'Int8' is from 'dart:ffi'.
   Pointer<Int8> p2 = p.value; //# 25: compile-time error
                        ^
-../../tests/ffi/vmspecific_static_checks_test.dart:131:7: Error: The setter 'value' isn't defined for the class 'Pointer<NativeType>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:138:7: Error: The setter 'value' isn't defined for the class 'Pointer<NativeType>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'NativeType' is from 'dart:ffi'.
 Try correcting the name to the name of an existing setter, or defining a setter or field named 'value'.
     p.value = 123; //# 26: compile-time error
       ^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:144:15: Error: A value of type 'T' can't be assigned to a variable of type 'int'.
+../../tests/ffi/vmspecific_static_checks_test.dart:151:15: Error: A value of type 'T' can't be assigned to a variable of type 'int'.
     p.value = arg; //# 27: compile-time error
               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:155:6: Error: The setter 'value' isn't defined for the class 'Pointer<Void>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:162:6: Error: The setter 'value' isn't defined for the class 'Pointer<Void>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'Void' is from 'dart:ffi'.
 Try correcting the name to the name of an existing setter, or defining a setter or field named 'value'.
   p2.value = 1234; //# 28: compile-time error
      ^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:163:5: Error: The setter 'value' isn't defined for the class 'Pointer<NativeFunction<Int8 Function(Int8)>>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:170:5: Error: The setter 'value' isn't defined for the class 'Pointer<NativeFunction<Int8 Function(Int8)>>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Int8' is from 'dart:ffi'.
 Try correcting the name to the name of an existing setter, or defining a setter or field named 'value'.
   p.value = f; //# 29: compile-time error
     ^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:178:13: Error: A value of type 'Pointer<Int8>' can't be assigned to a variable of type 'Pointer<Int16>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:185:13: Error: A value of type 'Pointer<Int8>' can't be assigned to a variable of type 'Pointer<Int16>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'Int8' is from 'dart:ffi'.
  - 'Int16' is from 'dart:ffi'.
   p.value = pHelper; //# 40: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:208:16: Error: Non-nullable variable 'p' must be assigned before it can be used.
+../../tests/ffi/vmspecific_static_checks_test.dart:215:16: Error: Non-nullable variable 'p' must be assigned before it can be used.
   Function f = p.asFunction<IntUnOp>(); //# 13: compile-time error
                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:526:21: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:585:21: Error: Can't use 'EmptyStruct' because it is declared more than once.
       Void Function(EmptyStruct), //# 1100: compile-time error
                     ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:527:21: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:586:21: Error: Can't use 'EmptyStruct' because it is declared more than once.
       void Function(EmptyStruct)>("DoesNotExist"); //# 1100: compile-time error
                     ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:534:7: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:593:7: Error: Can't use 'EmptyStruct' because it is declared more than once.
       EmptyStruct Function(), //# 1101: compile-time error
       ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:535:7: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:594:7: Error: Can't use 'EmptyStruct' because it is declared more than once.
       EmptyStruct Function()>("DoesNotExist"); //# 1101: compile-time error
       ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:543:29: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:602:29: Error: Can't use 'EmptyStruct' because it is declared more than once.
               Void Function(EmptyStruct)>> //# 1102: compile-time error
                             ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:545:36: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:604:36: Error: Can't use 'EmptyStruct' because it is declared more than once.
   pointer.asFunction<void Function(EmptyStruct)>(); //# 1102: compile-time error
                                    ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:552:26: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:611:26: Error: Can't use 'EmptyStruct' because it is declared more than once.
           NativeFunction<EmptyStruct Function()>> //# 1103: compile-time error
                          ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:554:22: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:613:22: Error: Can't use 'EmptyStruct' because it is declared more than once.
   pointer.asFunction<EmptyStruct Function()>(); //# 1103: compile-time error
                      ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:559:26: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:618:26: Error: Can't use 'EmptyStruct' because it is declared more than once.
 void _consumeEmptyStruct(EmptyStruct e) => //# 1104: compile-time error
                          ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:563:38: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:622:38: Error: Can't use 'EmptyStruct' because it is declared more than once.
   Pointer.fromFunction<Void Function(EmptyStruct)>(//# 1104: compile-time error
                                      ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:569:37: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:628:37: Error: Can't use 'EmptyStruct' because it is declared more than once.
 EmptyStruct _returnEmptyStruct() => EmptyStruct(); //# 1105: compile-time error
                                     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:572:24: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:631:24: Error: Can't use 'EmptyStruct' because it is declared more than once.
   Pointer.fromFunction<EmptyStruct Function()>(//# 1105: compile-time error
                        ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:579:12: Error: Can't use 'EmptyStruct' because it is declared more than once.
+../../tests/ffi/vmspecific_static_checks_test.dart:638:12: Error: Can't use 'EmptyStruct' because it is declared more than once.
   external EmptyStruct nestedEmptyStruct; //# 1106: compile-time error
            ^^^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:638:31: Error: The method 'elementAt' isn't defined for the class 'Pointer<T>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:697:31: Error: The method 'elementAt' isn't defined for the class 'Pointer<T>'.
  - 'Pointer' is from 'dart:ffi'.
 Try correcting the name to the name of an existing method, or defining a method named 'elementAt'.
     returnValue = returnValue.elementAt(1); //# 1310: compile-time error
                               ^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:652:6: Error: The method 'elementAt' isn't defined for the class 'Pointer<NativeType>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:711:6: Error: The method 'elementAt' isn't defined for the class 'Pointer<NativeType>'.
  - 'Pointer' is from 'dart:ffi'.
  - 'NativeType' is from 'dart:ffi'.
 Try correcting the name to the name of an existing method, or defining a method named 'elementAt'.
   p2.elementAt(1); //# 1311: compile-time error
      ^^^^^^^^^
-../../tests/ffi/vmspecific_static_checks_test.dart:446:7: Error: The superclass, 'Pointer', has no unnamed constructor that takes no arguments.
+../../tests/ffi/vmspecific_static_checks_test.dart:505:7: Error: The superclass, 'Pointer', has no unnamed constructor that takes no arguments.
 class EPointer extends Pointer {} //# 914: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:337:19: Error: Field 'y' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:396:19: Error: Field 'y' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external double y; //# 50: compile-time error
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:347:19: Error: Field 'z' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:406:19: Error: Field 'z' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external double z;
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:353:19: Error: Expected type 'double' to be 'int', which is the Dart type corresponding to 'Int64'.
+../../tests/ffi/vmspecific_static_checks_test.dart:412:19: Error: Expected type 'double' to be 'int', which is the Dart type corresponding to 'Int64'.
  - 'Int64' is from 'dart:ffi'.
   external double z; //# 54: compile-time error
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:361:19: Error: Field 'z' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:420:19: Error: Field 'z' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external double z; //# 55: compile-time error
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:369:19: Error: Field 'z' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:428:19: Error: Field 'z' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external double z; //# 56: compile-time error
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:377:10: Error: Field 'z' is a dart:ffi Pointer to a struct field and therefore cannot be initialized before constructor execution.
+../../tests/ffi/vmspecific_static_checks_test.dart:436:10: Error: Field 'z' is a dart:ffi Pointer to a struct field and therefore cannot be initialized before constructor execution.
 Mark the field as external to avoid having to initialize it.
   double z = 10.0; //# 57: compile-time error
          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:389:21: Error: Field 'z' is a dart:ffi Pointer to a struct field and therefore cannot be initialized before constructor execution.
+../../tests/ffi/vmspecific_static_checks_test.dart:448:21: Error: Field 'z' is a dart:ffi Pointer to a struct field and therefore cannot be initialized before constructor execution.
 Mark the field as external to avoid having to initialize it.
   TestStruct9() : z = 0.0 {} //# 58: compile-time error
                     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:385:10: Error: Field 'z' is a dart:ffi Pointer to a struct field and therefore cannot be initialized before constructor execution.
+../../tests/ffi/vmspecific_static_checks_test.dart:444:10: Error: Field 'z' is a dart:ffi Pointer to a struct field and therefore cannot be initialized before constructor execution.
 Mark the field as external to avoid having to initialize it.
   double z; //# 58: compile-time error
          ^
-../../tests/ffi/vmspecific_static_checks_test.dart:436:7: Error: Classes extending 'AbiSpecificInteger' must have exactly one 'AbiSpecificIntegerMapping' annotation specifying the mapping from ABI to a NativeType integer with a fixed size.
+../../tests/ffi/vmspecific_static_checks_test.dart:495:7: Error: Classes extending 'AbiSpecificInteger' must have exactly one 'AbiSpecificIntegerMapping' annotation specifying the mapping from ABI to a NativeType integer with a fixed size.
 class EIntPtr extends IntPtr {} //# 99: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:436:7: Error: Classes extending 'AbiSpecificInteger' must have exactly one const constructor, no other members, and no type arguments.
+../../tests/ffi/vmspecific_static_checks_test.dart:495:7: Error: Classes extending 'AbiSpecificInteger' must have exactly one const constructor, no other members, and no type arguments.
 class EIntPtr extends IntPtr {} //# 99: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:508:19: Error: Field 'handle' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:567:19: Error: Field 'handle' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external Handle handle; //# 1001: compile-time error
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:515:19: Error: Field 'handle' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:574:19: Error: Field 'handle' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external Object handle; //# 1002: compile-time error
                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:579:24: Error: Field 'nestedEmptyStruct' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
+../../tests/ffi/vmspecific_static_checks_test.dart:638:24: Error: Field 'nestedEmptyStruct' requires exactly one annotation to declare its native type, which cannot be Void. dart:ffi Structs and Unions cannot have regular Dart fields.
   external EmptyStruct nestedEmptyStruct; //# 1106: compile-time error
                        ^
-../../tests/ffi/vmspecific_static_checks_test.dart:659:25: Error: Field 'a0' must have exactly one 'Array' annotation.
+../../tests/ffi/vmspecific_static_checks_test.dart:718:25: Error: Field 'a0' must have exactly one 'Array' annotation.
   external Array<Uint8> a0;
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:663:25: Error: Field 'a0' must have exactly one 'Array' annotation.
+../../tests/ffi/vmspecific_static_checks_test.dart:722:25: Error: Field 'a0' must have exactly one 'Array' annotation.
   external Array<Uint8> a0; //# 1401: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:670:32: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
+../../tests/ffi/vmspecific_static_checks_test.dart:729:32: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
   external Array<Array<Uint8>> a0; //# 1402: compile-time error
                                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:677:39: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
+../../tests/ffi/vmspecific_static_checks_test.dart:736:39: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
   external Array<Array<Array<Uint8>>> a0; //# 1403: compile-time error
                                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:684:32: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
+../../tests/ffi/vmspecific_static_checks_test.dart:743:32: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
   external Array<Array<Uint8>> a0; //# 1404: compile-time error
                                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:691:39: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
+../../tests/ffi/vmspecific_static_checks_test.dart:750:39: Error: Field 'a0' must have an 'Array' annotation that matches the dimensions.
   external Array<Array<Array<Uint8>>> a0; //# 1405: compile-time error
                                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:752:13: Error: Struct 'TestStruct1601' must have at most one 'Packed' annotation.
+../../tests/ffi/vmspecific_static_checks_test.dart:811:13: Error: Struct 'TestStruct1601' must have at most one 'Packed' annotation.
 final class TestStruct1601 extends Struct {
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:757:13: Error: Only packing to 1, 2, 4, 8, and 16 bytes is supported.
+../../tests/ffi/vmspecific_static_checks_test.dart:816:13: Error: Only packing to 1, 2, 4, 8, and 16 bytes is supported.
 final class TestStruct1602 extends Struct {
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:762:13: Error: Only packing to 1, 2, 4, 8, and 16 bytes is supported.
+../../tests/ffi/vmspecific_static_checks_test.dart:821:13: Error: Only packing to 1, 2, 4, 8, and 16 bytes is supported.
 final class TestStruct1607 extends Struct {
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:770:25: Error: Array dimensions must be positive numbers.
+../../tests/ffi/vmspecific_static_checks_test.dart:829:25: Error: Array dimensions must be positive numbers.
   external Array<Uint8> inlineArray; //# 1800: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:777:25: Error: Field 'inlineArray' must have an 'Array' annotation that matches the dimensions.
+../../tests/ffi/vmspecific_static_checks_test.dart:836:25: Error: Field 'inlineArray' must have an 'Array' annotation that matches the dimensions.
   external Array<Uint8> inlineArray; //# 1801: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:777:25: Error: Array dimensions must be positive numbers.
+../../tests/ffi/vmspecific_static_checks_test.dart:836:25: Error: Array dimensions must be positive numbers.
   external Array<Uint8> inlineArray; //# 1801: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:784:25: Error: Field 'inlineArray' must have an 'Array' annotation that matches the dimensions.
+../../tests/ffi/vmspecific_static_checks_test.dart:843:25: Error: Field 'inlineArray' must have an 'Array' annotation that matches the dimensions.
   external Array<Uint8> inlineArray; //# 1802: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:784:25: Error: Array dimensions must be positive numbers.
+../../tests/ffi/vmspecific_static_checks_test.dart:843:25: Error: Array dimensions must be positive numbers.
   external Array<Uint8> inlineArray; //# 1802: compile-time error
                         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:793:13: Error: Classes extending 'AbiSpecificInteger' must have exactly one 'AbiSpecificIntegerMapping' annotation specifying the mapping from ABI to a NativeType integer with a fixed size.
+../../tests/ffi/vmspecific_static_checks_test.dart:852:13: Error: Classes extending 'AbiSpecificInteger' must have exactly one 'AbiSpecificIntegerMapping' annotation specifying the mapping from ABI to a NativeType integer with a fixed size.
 final class AbiSpecificInteger1 extends AbiSpecificInteger {
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:793:13: Error: Classes extending 'AbiSpecificInteger' must have exactly one const constructor, no other members, and no type arguments.
+../../tests/ffi/vmspecific_static_checks_test.dart:852:13: Error: Classes extending 'AbiSpecificInteger' must have exactly one const constructor, no other members, and no type arguments.
 final class AbiSpecificInteger1 extends AbiSpecificInteger {
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:807:7: Error: Classes extending 'AbiSpecificInteger' must have exactly one 'AbiSpecificIntegerMapping' annotation specifying the mapping from ABI to a NativeType integer with a fixed size.
+../../tests/ffi/vmspecific_static_checks_test.dart:866:7: Error: Classes extending 'AbiSpecificInteger' must have exactly one 'AbiSpecificIntegerMapping' annotation specifying the mapping from ABI to a NativeType integer with a fixed size.
 class AbiSpecificInteger3
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:819:13: Error: Struct 'MyFinalizableStruct' can't implement Finalizable.
+../../tests/ffi/vmspecific_static_checks_test.dart:878:13: Error: Struct 'MyFinalizableStruct' can't implement Finalizable.
 Try removing the implements clause from 'MyFinalizableStruct'.
 final class MyFinalizableStruct extends Struct
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:520:13: Error: Struct 'EmptyStruct' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:579:13: Error: Struct 'EmptyStruct' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1099: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:522:13: Error: Struct 'EmptyStruct#1#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:581:13: Error: Struct 'EmptyStruct#1#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1100: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:530:13: Error: Struct 'EmptyStruct#2#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:589:13: Error: Struct 'EmptyStruct#2#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1101: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:538:13: Error: Struct 'EmptyStruct#3#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:597:13: Error: Struct 'EmptyStruct#3#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1102: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:548:13: Error: Struct 'EmptyStruct#4#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:607:13: Error: Struct 'EmptyStruct#4#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1103: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:557:13: Error: Struct 'EmptyStruct#5#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:616:13: Error: Struct 'EmptyStruct#5#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1104: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:567:13: Error: Struct 'EmptyStruct#6#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:626:13: Error: Struct 'EmptyStruct#6#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1105: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:576:13: Error: Struct 'EmptyStruct#7#0' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:635:13: Error: Struct 'EmptyStruct#7#0' is empty. Empty structs and unions are undefined behavior.
 final class EmptyStruct extends Struct {} //# 1106: compile-time error
             ^
-../../tests/ffi/vmspecific_static_checks_test.dart:341:7: Error: TestStruct 'TestStruct3' is empty. Empty structs and unions are undefined behavior.
+../../tests/ffi/vmspecific_static_checks_test.dart:400:7: Error: TestStruct 'TestStruct3' is empty. Empty structs and unions are undefined behavior.
 class TestStruct3 extends TestStruct {} //# 52: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:341:7: Error: Class 'TestStruct' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:400:7: Error: Class 'TestStruct' cannot be extended or implemented.
 class TestStruct3 extends TestStruct {} //# 52: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:436:7: Error: Class 'IntPtr' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:495:7: Error: Class 'IntPtr' cannot be extended or implemented.
 class EIntPtr extends IntPtr {} //# 99: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:470:7: Error: Class 'Object' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:529:7: Error: Class 'Object' cannot be extended or implemented.
 class IIntPtr implements IntPtr {} //# 88: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:484:7: Error: Class 'Object' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:543:7: Error: Class 'Object' cannot be extended or implemented.
 class IStruct implements Struct {} //# 815: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:486:7: Error: Class 'Object' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:545:7: Error: Class 'Object' cannot be extended or implemented.
 class IOpaque implements Opaque {} //# 816: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:801:7: Error: Class 'Object' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:860:7: Error: Class 'Object' cannot be extended or implemented.
 class AbiSpecificInteger2
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:807:7: Error: Class 'AbiSpecificInteger1' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:866:7: Error: Class 'AbiSpecificInteger1' cannot be extended or implemented.
 class AbiSpecificInteger3
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:813:7: Error: Class 'Object' cannot be extended or implemented.
+../../tests/ffi/vmspecific_static_checks_test.dart:872:7: Error: Class 'Object' cannot be extended or implemented.
 class AbiSpecificInteger4
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:188:11: Error: Expected type 'T' to be 'int Function(int)', which is the Dart type corresponding to 'NativeFunction<Int8 Function(Int8)>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:195:11: Error: Expected type 'T' to be 'int Function(int)', which is the Dart type corresponding to 'NativeFunction<Int8 Function(Int8)>'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Int8' is from 'dart:ffi'.
     f = p.asFunction<T>(); //# 11: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:198:11: Error: Expected type 'NativeFunction<Function>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:205:11: Error: Expected type 'NativeFunction<Function>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Function' is from 'dart:core'.
     f = p.asFunction<IntUnOp>(); //# 12: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:208:18: Error: Expected type 'NativeFunction<int Function(int)>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:215:18: Error: Expected type 'NativeFunction<int Function(int)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
   Function f = p.asFunction<IntUnOp>(); //# 13: compile-time error
                  ^
-../../tests/ffi/vmspecific_static_checks_test.dart:215:18: Error: Expected type 'int Function(int, int)' to be 'int Function(int)', which is the Dart type corresponding to 'NativeFunction<Int8 Function(Int8)>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:222:18: Error: Expected type 'int Function(int, int)' to be 'int Function(int)', which is the Dart type corresponding to 'NativeFunction<Int8 Function(Int8)>'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Int8' is from 'dart:ffi'.
   IntBinOp f = p.asFunction(); //# 14: compile-time error
                  ^
-../../tests/ffi/vmspecific_static_checks_test.dart:228:35: Error: fromFunction expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
+../../tests/ffi/vmspecific_static_checks_test.dart:235:35: Error: fromFunction expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
     result = Pointer.fromFunction(f); //# 70: compile-time error
                                   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:238:22: Error: Expected type 'NativeFunction<T>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:245:22: Error: Expected type 'NativeFunction<T>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
     result = Pointer.fromFunction(myTimesThree); //# 71: compile-time error
                      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:246:11: Error: Expected type 'NativeFunction<int Function(int)>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:253:11: Error: Expected type 'NativeFunction<int Function(int)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
   Pointer.fromFunction<IntUnOp>(myTimesFour); //# 72: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:251:15: Error: Expected type 'int Function(int)' to be 'double Function(double)', which is the Dart type corresponding to 'NativeFunction<Double Function(Double)>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:258:15: Error: Expected type 'int Function(int)' to be 'double Function(double)', which is the Dart type corresponding to 'NativeFunction<Double Function(Double)>'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Double' is from 'dart:ffi'.
   p = Pointer.fromFunction(myTimesFour); //# 73: compile-time error
               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:257:28: Error: fromFunction expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
+../../tests/ffi/vmspecific_static_checks_test.dart:264:28: Error: fromFunction expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
   p = Pointer.fromFunction(someClosure); //# 74: compile-time error
                            ^
-../../tests/ffi/vmspecific_static_checks_test.dart:267:28: Error: fromFunction expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
+../../tests/ffi/vmspecific_static_checks_test.dart:274:28: Error: fromFunction expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
   p = Pointer.fromFunction(fld); //# 75: compile-time error
                            ^
-../../tests/ffi/vmspecific_static_checks_test.dart:271:11: Error: Expected type 'NativeFunction<Function>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:278:11: Error: Expected type 'NativeFunction<Function>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Function' is from 'dart:core'.
   Pointer.fromFunction<Function>(//# 76: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:278:15: Error: Exceptional return value must be a constant.
+../../tests/ffi/vmspecific_static_checks_test.dart:285:15: Error: Exceptional return value must be a constant.
   p = Pointer.fromFunction(myTimesThree, notAConst); //# 77: compile-time error
               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:285:16: Error: Expected type 'NativeFunction<T>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:297:38: Error: listener expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
+    result = NativeCallable.listener(f); //# 2100: compile-time error
+                                     ^
+../../tests/ffi/vmspecific_static_checks_test.dart:307:29: Error: Expected type 'NativeFunction<T>' to be a valid and instantiated subtype of 'NativeType'.
+ - 'NativeFunction' is from 'dart:ffi'.
+    result = NativeCallable.listener(myVoidFunc); //# 2101: compile-time error
+                            ^
+../../tests/ffi/vmspecific_static_checks_test.dart:315:3: Error: Expected type 'void Function(int)' to be 'void Function()', which is the Dart type corresponding to 'NativeFunction<Void Function()>'.
+ - 'NativeFunction' is from 'dart:ffi'.
+ - 'Void' is from 'dart:ffi'.
+  NativeCallable<NativeVoidFunc>.listener( //# 2102: compile-time error
+  ^
+../../tests/ffi/vmspecific_static_checks_test.dart:321:22: Error: Expected type 'void Function(int)' to be 'void Function()', which is the Dart type corresponding to 'NativeFunction<Void Function()>'.
+ - 'NativeFunction' is from 'dart:ffi'.
+ - 'Void' is from 'dart:ffi'.
+  p = NativeCallable.listener(myVoidFunc2); //# 2103: compile-time error
+                     ^
+../../tests/ffi/vmspecific_static_checks_test.dart:327:31: Error: listener expects a static function as parameter. dart:ffi only supports calling static Dart functions from native code. Closures and tear-offs are not supported because they can capture context.
+  p = NativeCallable.listener(someClosure); //# 2104: compile-time error
+                              ^
+../../tests/ffi/vmspecific_static_checks_test.dart:331:3: Error: Expected type 'NativeFunction<Function>' to be a valid and instantiated subtype of 'NativeType'.
+ - 'NativeFunction' is from 'dart:ffi'.
+ - 'Function' is from 'dart:core'.
+  NativeCallable<Function>.listener(//# 2105: compile-time error
+  ^
+../../tests/ffi/vmspecific_static_checks_test.dart:337:7: Error: The return type of the function passed to NativeCallable.listener must be void rather than 'double'.
+      myTimesThree); //# 2106: compile-time error
+      ^
+../../tests/ffi/vmspecific_static_checks_test.dart:344:16: Error: Expected type 'NativeFunction<T>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
     result = l.lookupFunction<T, DoubleUnOp>("cos"); //# 15: compile-time error
                ^
-../../tests/ffi/vmspecific_static_checks_test.dart:297:11: Error: Expected type 'T' to be 'double Function(double)', which is the Dart type corresponding to 'NativeFunction<Double Function(Double)>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:356:11: Error: Expected type 'T' to be 'double Function(double)', which is the Dart type corresponding to 'NativeFunction<Double Function(Double)>'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Double' is from 'dart:ffi'.
         l.lookupFunction<NativeDoubleUnOp, T>("cos"); //# 16: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:306:5: Error: Expected type 'NativeFunction<int Function(int)>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:365:5: Error: Expected type 'NativeFunction<int Function(int)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
   l.lookupFunction<IntUnOp, IntUnOp>("cos"); //# 17: compile-time error
     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:311:5: Error: Expected type 'int Function(int)' to be 'double Function(double)', which is the Dart type corresponding to 'NativeFunction<Double Function(Double)>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:370:5: Error: Expected type 'int Function(int)' to be 'double Function(double)', which is the Dart type corresponding to 'NativeFunction<Double Function(Double)>'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Double' is from 'dart:ffi'.
   l.lookupFunction<NativeDoubleUnOp, IntUnOp>("cos"); //# 18: compile-time error
     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:502:15: Error: Expected type 'MyClass Function(Object)' to be 'Object Function(Object)', which is the Dart type corresponding to 'NativeFunction<Handle Function(Handle)>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:561:15: Error: Expected type 'MyClass Function(Object)' to be 'Object Function(Object)', which is the Dart type corresponding to 'NativeFunction<Handle Function(Handle)>'.
  - 'MyClass' is from '../../tests/ffi/vmspecific_static_checks_test.dart'.
  - 'Object' is from 'dart:core'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Handle' is from 'dart:ffi'.
   testLibrary.lookupFunction< //# 1000: compile-time error
               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:525:15: Error: Expected type 'NativeFunction<Void Function(invalid-type)>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:584:15: Error: Expected type 'NativeFunction<Void Function(invalid-type)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Void' is from 'dart:ffi'.
   testLibrary.lookupFunction< //# 1100: compile-time error
               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:533:15: Error: Expected type 'NativeFunction<invalid-type Function()>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:592:15: Error: Expected type 'NativeFunction<invalid-type Function()>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
   testLibrary.lookupFunction< //# 1101: compile-time error
               ^
-../../tests/ffi/vmspecific_static_checks_test.dart:545:11: Error: Expected type 'NativeFunction<Void Function(invalid-type)>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:604:11: Error: Expected type 'NativeFunction<Void Function(invalid-type)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Void' is from 'dart:ffi'.
   pointer.asFunction<void Function(EmptyStruct)>(); //# 1102: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:554:11: Error: Expected type 'NativeFunction<invalid-type Function()>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:613:11: Error: Expected type 'NativeFunction<invalid-type Function()>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
   pointer.asFunction<EmptyStruct Function()>(); //# 1103: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:563:11: Error: Expected type 'NativeFunction<Void Function(invalid-type)>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:622:11: Error: Expected type 'NativeFunction<Void Function(invalid-type)>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Void' is from 'dart:ffi'.
   Pointer.fromFunction<Void Function(EmptyStruct)>(//# 1104: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:572:11: Error: Expected type 'NativeFunction<invalid-type Function()>' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:631:11: Error: Expected type 'NativeFunction<invalid-type Function()>' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeFunction' is from 'dart:ffi'.
   Pointer.fromFunction<EmptyStruct Function()>(//# 1105: compile-time error
           ^
-../../tests/ffi/vmspecific_static_checks_test.dart:587:21: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:646:21: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
     pointer = calloc(); //# 1320: compile-time error
                     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:595:9: Error: Expected type 'NativeType' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:654:9: Error: Expected type 'NativeType' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeType' is from 'dart:ffi'.
   calloc(); //# 1321: compile-time error
         ^
-../../tests/ffi/vmspecific_static_checks_test.dart:601:17: Error: Expected type 'Struct' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:660:17: Error: Expected type 'Struct' to be a valid and instantiated subtype of 'NativeType'.
  - 'Struct' is from 'dart:ffi'.
   structPointer.ref; //# 1330: compile-time error
                 ^
-../../tests/ffi/vmspecific_static_checks_test.dart:606:7: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:665:7: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
     p.ref; //# 1200: compile-time error
       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:609:17: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:668:17: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
     p.cast<T>().ref; //# 1201: compile-time error
                 ^
-../../tests/ffi/vmspecific_static_checks_test.dart:612:6: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:671:6: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
     p[0]; //# 1202: compile-time error
      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:615:6: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:674:6: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
     p[0]; //# 1210: compile-time error
      ^
-../../tests/ffi/vmspecific_static_checks_test.dart:620:12: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:679:12: Error: Expected type 'T' to be a valid and instantiated subtype of 'NativeType'.
     size = sizeOf<T>(); //# 1300: compile-time error
            ^
-../../tests/ffi/vmspecific_static_checks_test.dart:628:3: Error: Expected type 'NativeType' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:687:3: Error: Expected type 'NativeType' to be a valid and instantiated subtype of 'NativeType'.
  - 'NativeType' is from 'dart:ffi'.
   sizeOf(); //# 1301: compile-time error
   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:632:3: Error: Expected type 'Handle' to be a valid and instantiated subtype of 'NativeType'.
+../../tests/ffi/vmspecific_static_checks_test.dart:691:3: Error: Expected type 'Handle' to be a valid and instantiated subtype of 'NativeType'.
  - 'Handle' is from 'dart:ffi'.
   sizeOf<Handle>(); //# 1302: compile-time error
   ^
-../../tests/ffi/vmspecific_static_checks_test.dart:699:5: Error: Argument 'isLeaf' must be a constant.
+../../tests/ffi/vmspecific_static_checks_test.dart:758:5: Error: Argument 'isLeaf' must be a constant.
   l.lookupFunction< //# 1500: compile-time error
     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:708:17: Error: Argument 'isLeaf' must be a constant.
+../../tests/ffi/vmspecific_static_checks_test.dart:767:17: Error: Argument 'isLeaf' must be a constant.
   IntUnOp f = p.asFunction(isLeaf: notAConst); //# 1501: compile-time error
                 ^
-../../tests/ffi/vmspecific_static_checks_test.dart:716:5: Error: FFI leaf call must not have Handle argument types.
+../../tests/ffi/vmspecific_static_checks_test.dart:775:5: Error: FFI leaf call must not have Handle argument types.
   l.lookupFunction< //# 1502: compile-time error
     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:725:21: Error: FFI leaf call must not have Handle argument types.
+../../tests/ffi/vmspecific_static_checks_test.dart:784:21: Error: FFI leaf call must not have Handle argument types.
   TakesHandle f = p.asFunction(isLeaf: true); //# 1503: compile-time error
                     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:733:5: Error: FFI leaf call must not have Handle return type.
+../../tests/ffi/vmspecific_static_checks_test.dart:792:5: Error: FFI leaf call must not have Handle return type.
   l.lookupFunction< //# 1504: compile-time error
     ^
-../../tests/ffi/vmspecific_static_checks_test.dart:742:23: Error: FFI leaf call must not have Handle return type.
+../../tests/ffi/vmspecific_static_checks_test.dart:801:23: Error: FFI leaf call must not have Handle return type.
   ReturnsHandle f = p.asFunction(isLeaf: true); //# 1505: compile-time error
                       ^
-../../tests/ffi/vmspecific_static_checks_test.dart:828:8: Error: Expected type 'void Function()' to be 'Object Function()', which is the Dart type corresponding to 'NativeFunction<Handle Function()>'.
+../../tests/ffi/vmspecific_static_checks_test.dart:887:8: Error: Expected type 'void Function()' to be 'Object Function()', which is the Dart type corresponding to 'NativeFunction<Handle Function()>'.
  - 'Object' is from 'dart:core'.
  - 'NativeFunction' is from 'dart:ffi'.
  - 'Handle' is from 'dart:ffi'.
