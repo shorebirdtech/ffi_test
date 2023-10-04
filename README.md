@@ -228,7 +228,7 @@ First you have to determine which version of Flutter you're going to use
 as your base.  Since you have a specific Dart revision base you're trying to
 build into Flutter, you need to figure out what version of Flutter shipped
 with that exact Dart revision (or close enough).  In the case of
-`shorebird/mixed-mode` it's based on Dart 3.1.0, which was in Flutter 3.13.0.
+`shorebird/mixed` it's based on Dart 3.1.0, which was in Flutter 3.13.0.
 
 You can figure out what version of Flutter/Dart your branch is based on by
 walking back through `git log` until you find a tag from the flutter team.
@@ -248,6 +248,11 @@ e.g for mixed-mode:
 cd third_party/dart
 git checkout shorebird/mixed-mode
 ```
+
+I've already done the above as part of a `mixed` branch on the `engine` repo.
+It may still be necessary to update the DEPS of that branch to point to the
+latest commit in the `shorebird/mixed` branch of the Dart repo and then
+`gclient sync` again.
 
 #### Host
 
