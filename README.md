@@ -344,7 +344,21 @@ Then run the shorebird linker to link them:
  dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
 ```
 
-It will print a table of offsets (which we will need to teach mixed-mode
-how to read later, possibly in binary form).  The example I gave you above
-isn't very interesting, because it only changes one function and that function
-obviously cannot be shared.  We still need to test it on larger programs.
+It will write out an `after.link` file which contains the two linker tables
+one mapping from CPU -> Simulator offsets and the other in reverse.
+
+You can load the link file into the Dart VM with the `--link_file` flag:
+
+```
+dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
+Wrote 3375 cpu_to_sim offsets and 3375 sim_to_cpu offsets to after.link
+eseidel@erics-mbp ffi_test % ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product --link_file=after.link ffi.aot
+cpu_to_sim_count = 3375
+sim_to_cpu_count = 3375
+cpu_to_sim[0] = 68 68
+sim_to_cpu[0] = 68 68
+...
+```
+
+Right now it just prints the table header and first entry, eventually we'll
+make it load into the isolate and do the actual linking.
