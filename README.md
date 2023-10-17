@@ -304,3 +304,47 @@ the actual command execution stops).
 This most often happens when you haven't built `host_release` with the same
 version of Dart as you're trying to use for `ios_release`.  Make sure you
 `gclient sync` with the same version of Flutter you're trying to use for iOS.
+
+
+## Linking
+
+Linking is an experimental feature on `shorebird/mixed`.
+
+You will need to build analyze_snapshot:
+```
+./tools/build.py -m debug -a arm64 --no-goma --gn-args='dart_simulator_ffi=true' \
+    --gn-args='dart_debug_optimization_level=0' \
+    analyze_snapshot
+```
+
+Compile the Dart code to AOT.  We've written a `compile.dart` helper script
+to support compiling multiple files at once with the correct flags.
+
+Take two dart files, e.g. `before.dart` and `after.dart`:
+
+```dart
+void main() {
+    print("Hello before!");
+}
+```
+
+```dart
+void main() {
+    print("Hello after!");
+}
+```
+
+Compile them with `compile.dart`:
+```
+dart compile.dart before.dart after.dart
+```
+
+Then run the shorebird linker to link them:
+```
+ dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
+```
+
+It will print a table of offsets (which we will need to teach mixed-mode
+how to read later, possibly in binary form).  The example I gave you above
+isn't very interesting, because it only changes one function and that function
+obviously cannot be shared.  We still need to test it on larger programs.
