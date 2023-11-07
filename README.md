@@ -273,6 +273,9 @@ https://github.com/flutter/engine/blob/main/ci/builders/mac_host_engine.json#L16
 
 #### iOS
 
+Make sure the App you're running is configured to use the Release scheme:
+https://github.com/flutter/flutter/wiki/Debugging-the-engine#debugging-ios-builds-with-xcode
+
 To build the engine for iOS with your changes:
 ```
 ./flutter/tools/gn --no-goma --runtime-mode=release --no-enable-unittests --ios --gn-arg='dart_force_simulator=true' && \
@@ -362,3 +365,17 @@ sim_to_cpu[0] = 68 68
 
 Right now it just prints the table header and first entry, eventually we'll
 make it load into the isolate and do the actual linking.
+
+
+### Mixed Mode testing.
+
+This doesn't really belong here, but it's a convenient place to put it.
+
+```
+git checkout  3.1.5
+gclient sync
+tools/build.py -m debug -a arm64 runtime dart_precompiled_runtime gen_snapshot --no-goma --gn-args='dart_force_simulator=true'
+tools/test.py -m debug -c dartkp -r dart_precompiled -a arm64 -p line corelib > mixed_mode_results.txt
+```
+
+See mixed_mode_results.txt

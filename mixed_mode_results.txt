@@ -1,0 +1,886 @@
+No build targets found.
+Test configuration:
+    custom-configuration-1(architecture: arm64, compiler: dartkp, mode: debug, runtime: dart_precompiled, system: mac)
+Suites tested: corelib
+Done dartkp-dart_precompiled debug_arm64 corelib/string_trim_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_set_undefined_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_concurrent_modify_self_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round_to_double3_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_get_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/cast_set_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply2_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_skip_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_start_end_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_ceil_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/core_runtime_types_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_tostring_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply2_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/collection_removes_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_to_string2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_first_match_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_from_entries_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time6_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_mapping_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_all_matches_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_empty_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_index_of_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment3_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment3_test/03: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_where_type_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment3_test/04: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment3_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment3_test/05: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/error_throw_with_stacktrace_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_source_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_mul_div_vm_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_mul_div_vm_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_containsAll_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment3_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_mapping_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_round_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/type_hashcode_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_contains_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_of_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/error_stack_trace1_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time_copy_with_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/format_exception_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/null_nosuchmethod_test/01/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/null_nosuchmethod_test/01/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/null_nosuchmethod_test/none/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/errors_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time_parse_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/null_nosuchmethod_test/none/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_followed_by_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_hash_code_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/collection_length_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_truncate_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_hash_code_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_hash_code_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/splay_tree_from_iterables_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/char-insensitive_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_from_iterables_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/strings_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regress-regexp-codeflush_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_filled_type_argument_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/bol_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regexp_kde_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_hash_code_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/dot-all_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/non-bmp_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/named_captures_2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/no-extensions_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-regexp-backrefs_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-regexp-match-index_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-char-class_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/invalid-range-in-class_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/bol-with-multiline_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/named_captures_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/early-acid3-86_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/compile-crash_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/UC16_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regexp_escape_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/many-brackets_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-general-category_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicodeCaseInsensitive_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/extended-characters-match_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/alternatives_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/extended-characters-more_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/captures_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-character-ranges_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/alternative-length-miscalculation_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regexp_regress_52182_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/jemalloc_leak_backtracking_stack_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-regexp-ignore-case_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/norepeat_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-enumerated_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/multiline_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/overflow_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/loop-capture_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-scripts_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/quantified-assertions_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/ranges-and-escaped-hyphens_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/lookahead_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regexp_regression_39406_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/capture-3_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/non-character_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/stack-overflow2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/parentheses_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/non-greedy-parentheses_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regress-regexp-construct-result_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/lookbehind_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/lookbehind_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/assertion_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/negative-special-characters_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/compile_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/dotstar_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/zero-length-alternatives_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-regexp-zero-length_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-handling_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-invalid_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-regexp-unanchored-advance_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/toString_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/character-match-out-of-order_test: pass
+
+FAILED: dartkp-dart_precompiled debug_arm64 corelib/regexp/stack-overflow_test
+Expected: Pass
+Actual: RuntimeError
+
+--- Command "vm_compile_to_kernel" (took 908ms):
+DART_CONFIGURATION=DebugARM64 /Users/eseidel/Documents/GitHub/dart-sdk/sdk/pkg/vm/tool/gen_kernel --aot --platform=xcodebuild/DebugARM64/vm_platform_strong.dill -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.dill /Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/corelib/regexp/stack-overflow_test.dart -Dtest_runner.configuration=custom-configuration-1 --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json -Ddart.vm.product=false --sound-null-safety
+
+exit code:
+0
+
+--- Command "precompiler" (took 04.000387s):
+DART_CONFIGURATION=DebugARM64 xcodebuild/DebugARM64/gen_snapshot --snapshot-kind=app-aot-assembly --assembly=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.S --sound-null-safety -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.dill
+
+exit code:
+0
+
+--- Command "remove_kernel_file" (took 13ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.dill
+
+exit code:
+0
+
+--- Command "assemble" (took 506ms):
+DART_CONFIGURATION=DebugARM64 clang -Wl,-undefined,error -Wl,-no_compact_unwind -dynamiclib -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.aotsnapshot /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.S
+
+exit code:
+0
+
+stderr:
+ld: warning: -undefined error is deprecated
+
+--- Command "remove_assembly" (took 20ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.S
+
+exit code:
+0
+
+--- Command "vm" (took 103ms):
+DART_CONFIGURATION=DebugARM64 TEST_COMPILATION_DIR=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test xcodebuild/DebugARM64/dart_precompiled_runtime --sound-null-safety -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_regexp_stack-overflow_test/out.aotsnapshot
+
+exit code:
+255
+
+stderr:
+Unhandled exception:
+Stack Overflow
+#0      _RegExp._ExecuteMatch (dart:core-patch/regexp_patch.dart)
+#1      _RegExp.firstMatch (dart:core-patch/regexp_patch.dart)
+#2      main (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/corelib/regexp/stack-overflow_test.dart)
+#3      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart)
+#4      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart)
+
+--- Re-run this test:
+python3 tools/test.py -m debug -c dartkp -r dart_precompiled -a arm64 corelib/regexp/stack-overflow_test
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/stack-overflow_test: fail
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-exact-match_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/non-capturing-groups_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-regexp-restricted-syntax_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/find-first-asserted_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/indexof_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/capture_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-binary_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/range-out-of-order_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/ascii-regexp-subject_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/ecma-regex-examples_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/results-cache_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/repeat-match-waldemar_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/non-capturing-backtracking_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-property-special_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/backreferences_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/lastindex_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/pcre-test-4_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/unicode-escapes-in-regexps_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/range-bound-ffff_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/default_arguments_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/look-ahead_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/constructor_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regress-6-9-regexp_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/issue_19193_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/malformed-escapes_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/standalones_test: pass
+
+FAILED: dartkp-dart_precompiled debug_arm64 corelib/unicode_test
+Expected: Pass
+Actual: RuntimeError
+
+--- Command "vm_compile_to_kernel" (took 936ms):
+DART_CONFIGURATION=DebugARM64 /Users/eseidel/Documents/GitHub/dart-sdk/sdk/pkg/vm/tool/gen_kernel --aot --platform=xcodebuild/DebugARM64/vm_platform_strong.dill -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.dill /Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/corelib/unicode_test.dart -Dtest_runner.configuration=custom-configuration-1 --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json -Ddart.vm.product=false --sound-null-safety
+
+exit code:
+0
+
+--- Command "precompiler" (took 04.000131s):
+DART_CONFIGURATION=DebugARM64 xcodebuild/DebugARM64/gen_snapshot --snapshot-kind=app-aot-assembly --assembly=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.S --sound-null-safety -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.dill
+
+exit code:
+0
+
+--- Command "remove_kernel_file" (took 15ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.dill
+
+exit code:
+0
+
+--- Command "assemble" (took 485ms):
+DART_CONFIGURATION=DebugARM64 clang -Wl,-undefined,error -Wl,-no_compact_unwind -dynamiclib -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.aotsnapshot /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.S
+
+exit code:
+0
+
+stderr:
+ld: warning: -undefined error is deprecated
+
+--- Command "remove_assembly" (took 10ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.S
+
+exit code:
+0
+
+--- Command "vm" (took 122ms):
+DART_CONFIGURATION=DebugARM64 TEST_COMPILATION_DIR=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test xcodebuild/DebugARM64/dart_precompiled_runtime --sound-null-safety -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_unicode_test/out.aotsnapshot
+
+exit code:
+255
+
+stderr:
+Unhandled exception:
+Expect.equals(expected: <STRASSE>, actual: <STRA\xDFE>) fails.
+#0      Expect._fail (package:expect/expect.dart:696)
+#1      Expect.equals (package:expect/expect.dart:117)
+#2      UnicodeTest.testMain (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/corelib/unicode_test.dart:10)
+#3      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
+#4      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
+
+--- Re-run this test:
+python3 tools/test.py -m debug -c dartkp -r dart_precompiled -a arm64 corelib/unicode_test
+Done dartkp-dart_precompiled debug_arm64 corelib/unicode_test: fail
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/regexp_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_pattern_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_operator_multiply_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/num_sign_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/num_sign_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/symbol_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_div_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_div_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/null_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_div_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_div_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sll_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sll_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sll_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sll_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_take_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/symbol_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/nan_infinity_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply4_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_ipv6_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/nan_infinity_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time_far_away_dates_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/linked_hash_map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sra_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sra_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sra_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sra_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_for_each_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time_js_modified_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_literal_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_growable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_contains_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_try_parse_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hash_map2_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hash_map2_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_floor_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_path_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_floor_test/int64: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_sort_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_base_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regress_33166_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_substring_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_to_string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply3_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_base_vm_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/json_map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round_to_double2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_length_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_return_type_int64_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hash_set_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_replace_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_last_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_radix_int64_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hash_set_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_radix_int64_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_radix_int64_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_fill_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hashcode_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_unmodifiable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/symbol_arbitrary_string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_index_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time7_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_try_parse_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_ceil_test/int64: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_ceil_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_try_parse_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/expression_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/splay_tree_from_iterable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_intersection_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/compare_to_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_group_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_from_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_replace_all_2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/linked_hash_map_from_iterables_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round_test/int64: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/none/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/none/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/none/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/none/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/01/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/01/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/01/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/01/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/02/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/02/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/02/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/02/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/04/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/04/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/04/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/04/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/05/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/05/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/05/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/06/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/05/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/06/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/06/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/06/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/07/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/07/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/07/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/07/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/08/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/08/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/08/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/09/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/08/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/09/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/09/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/09/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/10/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/10/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/11/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/10/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/10/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/11/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/11/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/11/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/12/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/12/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/12/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/12/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/13/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/13/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/13/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/13/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/14/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/14/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/16/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/14/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/14/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/16/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/16/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/16/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/17/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/17/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/18/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/17/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/17/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/18/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/18/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/18/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/19/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/19/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/19/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/19/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/20/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/20/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/20/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/21/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/20/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/21/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/21/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/21/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/22/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/22/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/22/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/22/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/23/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/23/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/23/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/23/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/24/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/24/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/24/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/24/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/25/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/25/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/25/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/25/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/26/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/26/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/26/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/26/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/27/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/27/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/27/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_test/27/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/const_list_set_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/collection_from_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_removeat_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/toInt_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_compare_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regress_45473_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_unmodifiable_cast_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_http_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_first_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/has_next_iterator_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_take_while_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regress_r21715_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_default_value_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bit_twiddling_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_iterators_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_last_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bit_twiddling_test/int64: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_remove_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_to_string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_div_rem_vm_test/none/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regexp/pcre_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_div_rem_vm_test/none/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_div_rem_vm_test/01/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp1_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_reversed_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_div_rem_vm_test/01/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_generate_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_generate_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply5_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_retainAll_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_add_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_add_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_add_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/04: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/03: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/06: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_add_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/07: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/08: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/09: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/11: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/typed_data_with_limited_ints_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/12: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/13: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/14: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/16: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_parse_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_element_at_test/static: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_parse_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_floor2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_arith_vm_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_parsed_arith_vm_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_expand_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_write_elements_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/10: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/05: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_test/15: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_element_at_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_update_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/growable_list_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/dynamic_nosuchmethod_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_ceil2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_trim2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/dynamic_nosuchmethod_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/collection_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_fixed_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/num_clamp_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/stopwatch2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_contains2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_from_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_entry_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_from_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_from_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_pattern_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_from_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/compare_to2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_from_test/4: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply_generic_function_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_arith_vm_test/none/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_arith_vm_test/none/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_arith_vm_test/none/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_arith_vm_test/modPow/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_arith_vm_test/modPow/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_arith_vm_test/modPow/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/range_error_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_floor_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regress_11099_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sub_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sub_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sub_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_sub_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/cast_map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_parse_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_runes_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regress_42011_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_parameters_all_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_join_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_floor_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unicode2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/const_list_literal_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mod_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mod_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mod_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mod_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/throw_half_surrogate_pair_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/throw_half_surrogate_pair_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/throw_half_surrogate_pair_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_groups_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/main_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_to_string_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment2_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time4_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment2_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment2_test/03: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment2_test/04: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment2_test/05: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_truncate_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_truncate_test/int64: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_to_string_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_extension_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_string_match_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time10_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/cast_list_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_insert_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round3_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment2_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_parse_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_replace_all_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_scheme_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_sublist_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_split_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_split_test/checkedstore: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_try_parse_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_query_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_truncate_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time9_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/duration_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_ceil_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_values4_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_keys_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/collection_of_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/splay_tree_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_modulo_arith_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/splay_tree_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_replace_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_modulo_arith_test/modPow: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_fromcharcode_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_set_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_fold_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_unmodifiable_cast_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_literal_is_growable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/duration_double_multiplication_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/duration_big_num_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/safe_to_string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/splay_tree_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/symbol_operator_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_single_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_test: pass
+
+FAILED: dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment_test
+Expected: Pass
+Actual: RuntimeError
+
+--- Command "vm_compile_to_kernel" (took 661ms):
+DART_CONFIGURATION=DebugARM64 /Users/eseidel/Documents/GitHub/dart-sdk/sdk/pkg/vm/tool/gen_kernel --aot --platform=xcodebuild/DebugARM64/vm_platform_strong.dill -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.dill /Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/corelib/bool_from_environment_test.dart -Da=true -Db=false -Dc=NOTBOOL -Dd=True -Dtest_runner.configuration=custom-configuration-1 --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json -Ddart.vm.product=false --sound-null-safety
+
+exit code:
+0
+
+--- Command "precompiler" (took 04.000156s):
+DART_CONFIGURATION=DebugARM64 xcodebuild/DebugARM64/gen_snapshot --snapshot-kind=app-aot-assembly --assembly=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.S --sound-null-safety -Da=true -Db=false -Dc=NOTBOOL -Dd=True -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.dill
+
+exit code:
+0
+
+--- Command "remove_kernel_file" (took 18ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.dill
+
+exit code:
+0
+
+--- Command "assemble" (took 536ms):
+DART_CONFIGURATION=DebugARM64 clang -Wl,-undefined,error -Wl,-no_compact_unwind -dynamiclib -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.aotsnapshot /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.S
+
+exit code:
+0
+
+stderr:
+ld: warning: -undefined error is deprecated
+
+--- Command "remove_assembly" (took 16ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.S
+
+exit code:
+0
+
+--- Command "vm" (took 171ms):
+DART_CONFIGURATION=DebugARM64 TEST_COMPILATION_DIR=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test xcodebuild/DebugARM64/dart_precompiled_runtime --sound-null-safety -Da=true -Db=false -Dc=NOTBOOL -Dd=True -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/tests_corelib_bool_from_environment_test/out.aotsnapshot
+
+exit code:
+255
+
+stderr:
+Unhandled exception:
+FormatException: Must specify at least one of compiler or runtime in options or configuration name.
+#0      Configuration.parse (package:smith/configuration.dart:239)
+#1      _configuration (package:expect/config.dart:18)
+#2      isVmJitConfiguration (package:expect/config.dart)
+#3      isVmConfiguration (package:expect/config.dart:34)
+#4      main (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/tests/corelib/bool_from_environment_test.dart:15)
+#5      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
+#6      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
+
+--- Re-run this test:
+python3 tools/test.py -m debug -c dartkp -r dart_precompiled -a arm64 corelib/bool_from_environment_test
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_from_environment_test: fail
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/object_hash_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_iterator_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_parse_radix_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/apply6_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_list_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_ipv4_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_contains_key_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_parse_radix_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_parse_radix_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_parse_radix_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/stacktrace_fromstring_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_to_set_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_modpow_hard_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_with_limited_ints_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_truncate2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_from_environment_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_receive_port_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_floor_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time_extremes_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/error_stack_trace_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/error_stack_trace_test/nullThrown: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_values2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_single_where_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_bitlength_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_bitlength_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_bitlength_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_bitlength_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_trimlr_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_trimlr_test/unicode63: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_hashcode_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_fromcharcodes_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_copy_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/very_big_integer_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/num_try_parse_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_reduce_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/local_date_time_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_to_radix_string_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_to_radix_string_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/03: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/integer_to_radix_string_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/04: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/05: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/06: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_operations_with_null_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/expando_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/expando_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_removeAll_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time5_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/nsm_invocation_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_replace_all_pattern_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/07: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/unsigned_shift_test/08: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hash_map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_buffer_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_codeunits_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/is_operator_basic_types_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_contains_argument_order_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp5_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_return_type_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_concurrent_modify_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/stacktrace_current_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hidden_library2_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hidden_library2_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_insert_all_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time11_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/nsm_invocation_generic_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_case_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_remove_test: pass
+
+FAILED: dartkp-dart_precompiled debug_arm64 corelib/string_case_test/01
+Expected: Pass
+Actual: RuntimeError
+
+--- Command "vm_compile_to_kernel" (took 704ms):
+DART_CONFIGURATION=DebugARM64 /Users/eseidel/Documents/GitHub/dart-sdk/sdk/pkg/vm/tool/gen_kernel --aot --platform=xcodebuild/DebugARM64/vm_platform_strong.dill -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.dill /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_tests/corelib/string_case_test_01.dart -Dtest_runner.configuration=custom-configuration-1 --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json -Ddart.vm.product=false --sound-null-safety
+
+exit code:
+0
+
+--- Command "precompiler" (took 04.000176s):
+DART_CONFIGURATION=DebugARM64 xcodebuild/DebugARM64/gen_snapshot --snapshot-kind=app-aot-assembly --assembly=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.S --sound-null-safety -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.dill
+
+exit code:
+0
+
+--- Command "remove_kernel_file" (took 22ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.dill
+
+exit code:
+0
+
+--- Command "assemble" (took 558ms):
+DART_CONFIGURATION=DebugARM64 clang -Wl,-undefined,error -Wl,-no_compact_unwind -dynamiclib -o /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.aotsnapshot /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.S
+
+exit code:
+0
+
+stderr:
+ld: warning: -undefined error is deprecated
+
+--- Command "remove_assembly" (took 7ms):
+DART_CONFIGURATION=DebugARM64 rm /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.S
+
+exit code:
+0
+
+--- Command "vm" (took 123ms):
+DART_CONFIGURATION=DebugARM64 TEST_COMPILATION_DIR=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01 xcodebuild/DebugARM64/dart_precompiled_runtime --sound-null-safety -Dtest_runner.configuration=custom-configuration-1 --ignore-unrecognized-flags --packages=/Users/eseidel/Documents/GitHub/dart-sdk/sdk/.dart_tool/package_config.json /Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_compilations/custom-configuration-1/multitest_corelib_string_case_test_01/out.aotsnapshot
+
+exit code:
+255
+
+stderr:
+Unhandled exception:
+Expect.equals(expected: <SS>, actual: <\xDF>) fails.
+#0      Expect._fail (package:expect/expect.dart:696)
+#1      Expect.equals (package:expect/expect.dart:117)
+#2      testSpecialCases (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_tests/corelib/string_case_test_01.dart:24)
+#3      main (file:///Users/eseidel/Documents/GitHub/dart-sdk/sdk/xcodebuild/DebugARM64/generated_tests/corelib/string_case_test_01.dart:9)
+#4      _delayEntrypointInvocation.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:296)
+#5      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:189)
+
+--- Re-run this test:
+python3 tools/test.py -m debug -c dartkp -r dart_precompiled -a arm64 corelib/string_case_test/01
+Done dartkp-dart_precompiled debug_arm64 corelib/string_case_test/01: fail
+Done dartkp-dart_precompiled debug_arm64 corelib/string_case_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_case_test/03: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/linked_hash_map_from_iterable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_cache_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/exception_implementation_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/error_stack_trace2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_to_lower_case_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_try_parse_int64_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_unmodifiable_view_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/collection_to_string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/reg_exp_has_match_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time8_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_normalize_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/string_replace_dollar_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/cast_iterable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_to_int_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/symbol_reserved_word_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/cast_strong_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_first_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/stopwatch_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_as_map_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_contains_value_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/regress_42502_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/03: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/04: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/06: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/08: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/07: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/09: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hash_set_type_check_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/11: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/12: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/13: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/14: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/16: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/null_closurized_method_tostring_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/shuffle_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/data_uri_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/double_round4_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_from_environment_int64_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_truncate_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_from_environment2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/05: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/15: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/from_environment_const_type_undefined_test/10: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/num_parse_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/num_parse_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_radix_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_radix_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_parse_radix_test/02: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/const_list_remove_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/for_in_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_set_all_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/date_time3_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_keys2_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/set_to_string_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bool_operator_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_from_iterable_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/hashcode_boxed_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mul_test/0: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mul_test/1: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mul_test/2: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/list_remove_range_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_normalize_path_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_to_list_test/none: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/bigint_mul_test/3: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/sort_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_first_where_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_to_list_test/01: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_ceil_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_values3_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/uri_file_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/map_values_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/invocation_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_from_environment_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_last_where_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/int_round_to_double_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/iterable_skip_while_test: pass
+Done dartkp-dart_precompiled debug_arm64 corelib/type_tostring_test: pass
+
+=== 653 tests passed, 4 failed ===
