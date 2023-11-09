@@ -339,7 +339,7 @@ dart compile.dart before.dart after.dart
 
 Then run the shorebird linker to link them:
 ```
-dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
+dart ../dart-sdk/sdk/pkg/aot_tools/bin/aot_tools.dart link --base before.aot --patch after.aot --analyze_snapshot ../dart-sdk/xcodebuild/DebugARM64/analyze_snapshot
 ```
 
 It will write out an `after.vmcode` file which contains the two linker tables
