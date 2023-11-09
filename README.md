@@ -110,7 +110,7 @@ Build targets needed for AOT compilation, in your Dart SDK checkout directory
 ```
 ./tools/build.py -m debug -a arm64 --no-goma --gn-args='dart_simulator_ffi=true' \
     --gn-args='dart_debug_optimization_level=0' \
-    gen_snapshot vm_platform_strong.dill
+    gen_snapshot vm_platform_strong.dill analyze_snapshot
 ```
 
 The `dart_debug_optimization_level` argument overrides the default -O2.  It's
@@ -311,14 +311,9 @@ version of Dart as you're trying to use for `ios_release`.  Make sure you
 
 ## Linking
 
-Linking is an experimental feature on `shorebird/mixed`.
+Linking is an experimental feature.
 
-You will need to build analyze_snapshot:
-```
-./tools/build.py -m debug -a arm64 --no-goma --gn-args='dart_simulator_ffi=true' \
-    --gn-args='dart_debug_optimization_level=0' \
-    analyze_snapshot
-```
+You will need analyze_snapshot (built above).
 
 Compile the Dart code to AOT.  We've written a `compile.dart` helper script
 to support compiling multiple files at once with the correct flags.
@@ -344,18 +339,17 @@ dart compile.dart before.dart after.dart
 
 Then run the shorebird linker to link them:
 ```
- dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
+dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
 ```
 
-It will write out an `after.link` file which contains the two linker tables
-one mapping from CPU -> Simulator offsets and the other in reverse.
-
-You can load the link file into the Dart VM with the `--link_file` flag:
+It will write out an `after.vmcode` file which contains the two linker tables
+one mapping from CPU -> Simulator offsets and the other in reverse with the
+after.aot file appended to it.
 
 ```
 dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
 Wrote 3375 cpu_to_sim offsets and 3375 sim_to_cpu offsets to after.link
-eseidel@erics-mbp ffi_test % ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product --link_file=after.link ffi.aot
+eseidel@erics-mbp ffi_test % ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product --base_snapshot=before.aot after.vmcode
 cpu_to_sim_count = 3375
 sim_to_cpu_count = 3375
 cpu_to_sim[0] = 68 68
