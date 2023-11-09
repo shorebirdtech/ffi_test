@@ -329,6 +329,7 @@ void main() {
 ```dart
 void main() {
     print("Hello after!");
+    print("And another thing"); // a new call makes the snapshot diff more different.
 }
 ```
 
