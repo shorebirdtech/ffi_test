@@ -340,7 +340,9 @@ dart compile.dart before.dart after.dart
 
 Then run the shorebird linker to link them:
 ```
-dart ../dart-sdk/sdk/pkg/aot_tools/bin/aot_tools.dart link --base before.aot --patch after.aot --analyze-snapshot ../dart-sdk/sdk/xcodebuild/DebugARM64/analyze_snapshot
+dart ../dart-sdk/sdk/pkg/aot_tools/bin/aot_tools.dart link \
+  --analyze-snapshot ../dart-sdk/sdk/xcodebuild/DebugARM64/analyze_snapshot \
+  --base=before.aot --patch=after.aot
 ```
 
 It will write out an `after.vmcode` file which contains the two linker tables
@@ -349,13 +351,25 @@ after.aot file appended to it.
 
 ```
 dart ../dart-sdk/sdk/pkg/aot_tools/bin/shorebird_linker.dart before.aot after.aot
-Wrote 3375 cpu_to_sim offsets and 3375 sim_to_cpu offsets to after.link
-eseidel@erics-mbp ffi_test % ../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product --base_snapshot=before.aot after.vmcode
-cpu_to_sim_count = 3375
-sim_to_cpu_count = 3375
+Found 3375 base codes and 3375 patch codes
+Base size: 819000, patch size: 819016
+Hash match found 2648 sharable functions with size 604796
+Hash match found 730 sharable leaf functions with size 43180
+Subgraph match found 1143 sharable functions with size 72292
+No sim offset for cpu offset 0x1cc with hash 8957670f
+...
+```
+
+```
+../dart-sdk/sdk/xcodebuild/DebugSIMARM64/dart_precompiled_runtime_product --base_snapshot=before.aot after.vmcode
+Loading failed: Not a 64-bit Mach-O file.
 cpu_to_sim[0] = 68 68
 sim_to_cpu[0] = 68 68
-...
+elf_file_offset = 1c000
+Loading failed: Not a 64-bit Mach-O file.
+base_snapshot: 0x103c78a40 0x103d57800
+base_snapshot: 0x103c78a40 0x103d57800
+Hello after!
 ```
 
 Right now it just prints the table header and first entry, eventually we'll
