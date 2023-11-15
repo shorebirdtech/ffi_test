@@ -180,6 +180,14 @@ redirected with `2>`.
 
 You can trace and disassemble at the same time.
 
+Sometimes you will want to change Log::ShouldLogForIsolateGroup to return
+true.  The default impl is fine if your failure i son the main isolate, but
+if it's before that you will want to return true to catch failures during
+startup.
+
+It's often useful to dump registers during Simulator::InstructionDecode
+right around where it calls the Disassembler.
+
 ### FFI tests
 
 In addition to the compiler and runtime, you'll need to build the supporting
