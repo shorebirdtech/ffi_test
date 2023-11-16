@@ -396,3 +396,27 @@ tools/test.py -m debug -c dartkp -r dart_precompiled -a arm64 -p line corelib > 
 ```
 
 See mixed_mode_results.txt
+
+
+### Updating extracted offsets.
+
+If you're changing the size of objects in the Dart VM, you might hit an error
+like this:
+```
+Code::ArrayTraits::elements_start_offset() got 176, Code_elements_start_offset expected 184
+../../third_party/dart/runtime/vm/dart.cc: 248: error: CheckOffsets failed. Try updating offsets by running ./tools/run_offsets_extractor.sh
+```
+
+You will need a Linux machine to update them:
+```
+bash -x tools/run_offsets_extractor.sh
+```
+The -x is just so you can see what commands its running in case one fails.
+
+For Shorebird employees we have a Linux machine in our cloud you can use:
+```
+% gcloud compute ssh kevin-linux
+[...login...]
+% cd dart-sdk/sdk
+% bash -x tools/run_offsets_extractor.sh
+```
